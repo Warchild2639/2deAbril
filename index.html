@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2 de Abril: Gesta de Soberanía - EEST N°3</title>
+    <link href="https://googleapis.com" rel="stylesheet">
+    <style>
+        :root {
+            --azul-mar: #003366;
+            --celeste: #74acdf;
+            --amarillo: #ffce00;
+            --rojo-yt: #FF0000;
+        }
+
+        body { 
+            margin: 0; 
+            font-family: 'Montserrat', sans-serif; 
+            scroll-behavior: smooth;
+            background: linear-gradient(-45deg, #74acdf, #ffffff, #74acdf, #003366);
+            background-size: 400% 400%;
+            animation: gradientBG 15s ease infinite;
+        }
+
+        @keyframes gradientBG {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        .container { 
+            max-width: 1150px; 
+            margin: 40px auto; 
+            background: rgba(255, 255, 255, 0.95); 
+            box-shadow: 0 0 100px rgba(0,0,0,0.3); 
+            border-radius: 15px;
+            overflow: hidden;
+        }
+
+        header { 
+            height: 400px; 
+            display: flex; 
+            align-items: center; 
+            justify-content: center; 
+            color: white; 
+            text-align: center;
+            background: linear-gradient(135deg, var(--celeste) 0%, var(--azul-mar) 100%);
+            border-bottom: 10px solid var(--amarillo);
+        }
+
+        .header-content h1 { font-size: 6rem; margin: 0; font-weight: 900; text-shadow: 5px 5px 20px rgba(0,0,0,0.4); }
+
+        nav { background: #f8f9fa; padding: 15px; display: flex; justify-content: center; gap: 25px; border-bottom: 5px solid var(--celeste); position: sticky; top: 0; z-index: 100; }
+        nav a { text-decoration: none; color: var(--azul-mar); font-weight: 700; text-transform: uppercase; font-size: 0.85rem; }
+
+        section { padding: 80px 60px; border-bottom: 1px solid #ddd; }
+
+        .subtitulo-moderno {
+            display: inline-block;
+            background: var(--azul-mar);
+            color: white;
+            padding: 15px 50px;
+            font-weight: 900;
+            font-size: 1.6rem;
+            margin-bottom: 50px;
+            text-transform: uppercase;
+            border-left: 12px solid var(--amarillo);
+            clip-path: polygon(0 0, 95% 0, 100% 50%, 95% 100%, 0 100%);
+        }
+
+        .layout { display: grid; grid-template-columns: 1fr 1fr; gap: 50px; align-items: start; margin-bottom: 20px; }
+        .texto p { line-height: 1.9; text-align: justify; font-size: 1.05rem; color: #1a1a1a; margin-top: 0; }
+
+        .foto { 
+            width: 100%; 
+            height: 450px; 
+            border-radius: 12px; 
+            background-size: cover; 
+            background-position: center; 
+            border: 6px solid #fff; 
+            box-shadow: 0 15px 35px rgba(0,0,0,0.2); 
+            background-color: #eee;
+        }
+
+        .yt-box { 
+            background: #001a33; 
+            color: white;
+            padding: 20px; 
+            border-radius: 12px; 
+            display: flex; 
+            align-items: center; 
+            justify-content: space-between; 
+            border-right: 8px solid var(--rojo-yt); 
+            margin-top: 10px;
+        }
+        .btn-yt { background: var(--rojo-yt); color: #fff; text-decoration: none; padding: 12px 25px; border-radius: 6px; font-weight: bold; transition: 0.3s; }
+        .btn-yt:hover { background: #ff3333; transform: scale(1.05); }
+
+        .grafico-caja { background: #001a33; color: #fff; padding: 50px; border-radius: 15px; }
+        .barra-ext { background: rgba(255,255,255,0.1); height: 45px; border-radius: 25px; overflow: hidden; margin: 15px 0 30px 0; border: 1px solid var(--celeste); }
+        .barra-int { height: 100%; background: var(--celeste); display: flex; align-items: center; padding-left: 25px; font-weight: 900; color: var(--azul-mar); }
+
+        footer { background: var(--azul-mar); color: white; padding: 60px; text-align: center; font-weight: 900; font-size: 1.3rem; }
+
+        @media (max-width: 900px) { 
+            .layout { grid-template-columns: 1fr; } 
+            .header-content h1 { font-size: 3rem; }
+            .foto { height: 300px; }
+            .yt-box { flex-direction: column; text-align: center; gap: 15px; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <header>
+        <div class="header-content">
+            <h1>2 de Abril</h1>
+            <p style="font-size: 1.5rem; font-weight: 700;">MALVINAS: SOBERANÍA, HONOR Y GLORIA</p>
+        </div>
+    </header>
+
+    <nav>
+        <a href="#historia">HISTORIA</a>
+        <a href="#batallas">LAS BATALLAS</a>
+        <a href="#conmemoracion">CONMEMORACIÓN</a>
+        <a href="#economia">ECONOMÍA</a>
+        <a href="#soberania">SOBERANÍA</a>
+    </nav>
+
+    <!-- HISTORIA -->
+    <section id="historia">
+        <div class="subtitulo-moderno">Raíces de la Soberanía</div>
+        <div class="layout">
+            <div class="texto">
+                <p>La disputa por las Islas Malvinas se remonta a la usurpación británica de 1833, un acto que rompió la integridad territorial argentina. Durante casi un siglo y medio, nuestro país sostuvo el reclamo en foros internacionales como la ONU. El desembarco del 2 de abril de 1982, conocido como "Operación Rosario", fue el intento de recuperar por la fuerza lo que la diplomacia no lograba resolver. Este hecho despertó un fervor patriótico inmenso, uniendo a la nación bajo una misma bandera. A pesar de los resultados finales, la gesta representa la voluntad inquebrantable de un pueblo que sabe que las islas son parte de su plataforma continental, de su historia y de su identidad soberana.</p>
+            </div>
+            <div class="foto" style="background-image: url('img/1.jpg');"></div>
+        </div>
+        <div class="yt-box">
+            <span>Video Informativo: Los orígenes del reclamo</span>
+            <a href="https://www.youtube.com/watch?v=YJ4afmY38SI" target="_blank" class="btn-yt">VER VIDEO</a>
+        </div>
+    </section>
+
+    <!-- BATALLAS -->
+    <section id="batallas" style="background: rgba(249,249,249,0.8);">
+        <div class="subtitulo-moderno">Hitos de la Guerra</div>
+
+        <div class="batalla-bloque">
+            <div class="layout">
+                <div class="texto">
+                    <h3>1. El ARA General Belgrano</h3>
+                    <p>El 2 de mayo de 1982, el crucero fue atacado fuera de la zona de exclusión por el submarino nuclear HMS Conqueror. El hundimiento resultó en la pérdida de 323 marinos argentinos, un hecho que eliminó cualquier esperanza de solución diplomática inmediata. Hoy, el Belgrano es un monumento marino que custodia nuestra soberanía en las profundidades del Atlántico Sur.</p>
+                </div>
+                <div class="foto" style="background-image: url('img/2.jpg');"></div>
+            </div>
+            <div class="yt-box">
+                <span>Archivo: El hundimiento del Belgrano</span>
+                <a href="https://www.youtube.com/watch?v=-aX9PJ4xado" target="_blank" class="btn-yt">VER VIDEO</a>
+            </div>
+        </div>
+
+        <div class="batalla-bloque" style="margin-top: 60px;">
+            <div class="layout" style="direction: rtl;">
+                <div class="texto" style="direction: ltr;">
+                    <h3>2. El HMS Coventry</h3>
+                    <p>El 25 de mayo, los pilotos argentinos escribieron una de las páginas más gloriosas de la aviación. Volando a ras del mar, los Skyhawk hundieron al destructor británico en solo 20 minutos. El coraje de estos "Halcones" asombró a la flota real y demostró el profesionalismo de nuestras fuerzas frente a una tecnología superior.</p>
+                </div>
+                <div class="foto" style="background-image: url('img/3.jpg');"></div>
+            </div>
+            <div class="yt-box">
+                <span>Hazaña Aérea: Ataque al Coventry</span>
+                <a href="https://www.youtube.com/watch?v=urDpPiB91y8" target="_blank" class="btn-yt">VER VIDEO</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONMEMORACIÓN -->
+    <section id="conmemoracion">
+        <div class="subtitulo-moderno">Memoria de los Caídos</div>
+        <div class="layout">
+            <div class="texto">
+                <p>El 2 de abril honramos a los 649 héroes que dieron su vida y a todos los veteranos. No es una celebración de la guerra, sino un reconocimiento al sacrificio por la patria. Recordar es un acto de justicia frente a los años de olvido que sufrieron los combatientes en la posguerra. Nuestra escuela técnica rinde homenaje a quienes defendieron el pabellón nacional con honor y valentía en el frío suelo malvinense.</p>
+            </div>
+            <div class="foto" style="background-image: url('img/4.jpg');"></div>
+        </div>
+        <div class="yt-box">
+            <span>Homenaje: Día del Veterano y de los Caídos</span>
+            <a href="https://www.youtube.com/watch?v=bCguGv8SSNs" target="_blank" class="btn-yt">VER VIDEO</a>
+        </div>
+    </section>
+
+    <!-- ECONOMÍA -->
+    <section id="economia" style="background: rgba(241,243,245,0.9);">
+        <div class="subtitulo-moderno">Impacto Económico</div>
+        <div class="layout">
+            <div class="grafico-caja">
+                <div style="display: flex; justify-content: space-between; font-weight: bold;"><span>Inflación 1982</span><span>209.7%</span></div>
+                <div class="barra-ext"><div class="barra-int" style="width: 90%;">CRISIS</div></div>
+                <div style="display: flex; justify-content: space-between; font-weight: bold;"><span>Deuda Externa</span><span>U$S 45.000M</span></div>
+                <div class="barra-ext"><div class="barra-int" style="width: 75%;">AUMENTO</div></div>
+            </div>
+            <div class="texto">
+                <p>La guerra aceleró el colapso de la economía. El aislamiento comercial y el enorme gasto bélico dispararon la inflación y la deuda. Analizar estos números nos permite entender que la soberanía no es solo territorial, sino también económica e industrial. Como futuros técnicos, saber manejar los recursos de la patria es también una forma de defensa nacional.</p>
+            </div>
+        </div>
+        <div class="yt-box">
+            <span>Análisis: La economía durante la guerra</span>
+            <a href="https://www.youtube.com/watch?v=WZDP8RXhjSQ" target="_blank" class="btn-yt">VER VIDEO</a>
+        </div>
+    </section>
+
+    <!-- SOBERANÍA -->
+    <section id="soberania">
+        <div class="subtitulo-moderno">Futuro de la Soberanía</div>
+        <div class="layout">
+            <div class="texto">
+                <p>La soberanía hoy se defiende con el estudio y la diplomacia. Malvinas es pesca, es petróleo y es la llave de nuestro futuro en el Atlántico Sur. Mantener viva la causa en las aulas es el mejor homenaje que podemos hacer. Las islas son argentinas por historia, por geografía y por el derecho irrenunciable de un pueblo que jamás dejará de reclamar lo que es suyo por justicia.</p>
+            </div>
+            <div class="foto" style="background-image: url('img/5.jpg');"></div>
+        </div>
+        <div class="yt-box">
+            <span>Causa Nacional: Soberanía y Futuro</span>
+            <a href="https://www.youtube.com/watch?v=sHrL51Opi0I" target="_blank" class="btn-yt">VER VIDEO</a>
+        </div>
+    </section>
+
+    <footer>
+        ESCUELA DE EDUCACIÓN SECUNDARIA TÉCNICA (EEST) N°3 DE LANÚS<br>
+        "ISLAS MALVINAS" - PROHIBIDO OLVIDAR
+    </footer>
+</div>
+
+</body>
+</html>
