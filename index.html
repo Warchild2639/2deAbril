@@ -211,7 +211,7 @@
             section { padding: 40px 6%; }
             .subtitulo-moderno { font-size: 1.2rem; padding: 15px 20px; margin-bottom: 30px; }
             
-            /* FORZADO DE 3 RENGLONES CON ALTA PRIORIDAD */
+            /* APLICAR A TODOS LOS PÁRRAFOS DE LAS SECCIONES */
             .texto p {
                 display: -webkit-box !important;
                 -webkit-line-clamp: 3 !important;
@@ -344,7 +344,7 @@
     </section>
 
     <!-- SOBERANÍA -->
-    <section id="soberania" style="border-bottom: none;">
+    <section id="soberania">
         <h2 class="subtitulo-moderno">Soberanía Hoy</h2>
         <div class="layout">
             <div class="foto izq" style="background-image: url('img/soberania.jpg');"></div>
@@ -363,9 +363,12 @@
 </div>
 
 <script>
+    // Seleccionamos todos los botones de "Leer más"
     document.querySelectorAll('.read-more-btn').forEach(btn => {
         btn.addEventListener('click', function() {
-            const parrafo = this.parentElement.querySelector('p');
+            // Buscamos el párrafo que está dentro del mismo bloque de texto que el botón
+            const parrafo = this.closest('.texto').querySelector('p');
+            
             if (parrafo.classList.contains('expanded')) {
                 parrafo.classList.remove('expanded');
                 this.textContent = '▾ Leer más';
