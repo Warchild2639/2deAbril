@@ -78,112 +78,98 @@
             transition: all 0.3s ease;
         }
 
-        nav a:hover { 
-            color: white; 
-            background-color: var(--azul-mar);
-        }
+        nav a:hover { color: white; background-color: var(--azul-mar); }
 
-        section { padding: 100px 10%; }
+        section { padding: 100px 10%; max-width: 1400px; margin: 0 auto; }
         section:nth-child(even) { background: #fff; }
         section:nth-child(odd) { background: #f9f9f9; }
 
+        /* SUBTÍTULOS LARGOS */
         .subtitulo-moderno {
-            display: inline-block;
+            display: block;
+            width: 100%; /* Alargado al ancho total */
             background: var(--azul-mar);
             color: white;
-            padding: 18px 50px;
+            padding: 20px 50px;
             font-weight: 900;
-            font-size: 1.6rem;
+            font-size: 1.8rem;
             margin-bottom: 60px;
             text-transform: uppercase;
-            border-left: 12px solid var(--amarillo);
-            clip-path: polygon(0 0, 95% 0, 100% 50%, 95% 100%, 0 100%);
+            border-left: 15px solid var(--amarillo);
+            /* Forma de flecha alargada */
+            clip-path: polygon(0 0, 98% 0, 100% 50%, 98% 100%, 0 100%);
         }
 
-        .video-wrapper {
-            display: flex;
-            justify-content: flex-end;
-            margin-top: 20px;
-        }
-
-        .btn-ver-video {
-            background-color: var(--rojo-yt);
-            color: white;
-            text-decoration: none;
-            padding: 12px 25px;
-            font-weight: 900;
-            border-radius: 50px;
-            font-size: 0.85rem;
-            transition: 0.3s;
-            box-shadow: 0 4px 10px rgba(255,0,0,0.2);
-        }
-
-        .btn-ver-video:hover {
-            transform: scale(1.05);
-            background-color: #cc0000;
-        }
-
+        /* DISEÑO TIPO LIBRO */
         .layout { 
-            display: grid; 
-            grid-template-columns: 1fr 1fr; 
-            gap: 60px; 
-            align-items: center; 
-        }
-
-        .texto p { 
-            line-height: 2; 
-            text-align: justify; 
-            font-size: 1.15rem; 
-            margin-bottom: 25px;
+            display: block; /* Cambiamos grid por block para que el texto fluya */
+            width: 100%;
         }
 
         .foto { 
-            width: 100%; 
-            height: 500px; 
+            width: 450px; /* Tamaño fijo para la imagen */
+            height: 350px; 
             border-radius: 20px; 
             background-size: cover; 
             background-position: center; 
             box-shadow: 0 20px 40px rgba(0,0,0,0.2);
             background-color: var(--celeste);
             border: 8px solid white;
+            margin-bottom: 30px;
         }
 
+        /* Alternancia de imagen izquierda/derecha con el texto rodeándola */
+        .foto.izq { float: left; margin-right: 40px; }
+        .foto.der { float: right; margin-left: 40px; }
+
+        .texto { width: 100%; }
+        .texto p { 
+            line-height: 1.8; 
+            text-align: justify; /* Efecto libro */
+            font-size: 1.2rem; 
+            margin-bottom: 20px;
+            hyphens: auto;
+        }
+
+        .video-wrapper {
+            clear: both; /* Asegura que el botón esté debajo de la imagen flotante */
+            display: flex;
+            justify-content: flex-end;
+            padding-top: 20px;
+        }
+
+        .btn-ver-video {
+            background-color: var(--rojo-yt);
+            color: white;
+            text-decoration: none;
+            padding: 12px 30px;
+            font-weight: 900;
+            border-radius: 50px;
+            transition: 0.3s;
+        }
+        .btn-ver-video:hover { transform: scale(1.05); background-color: #cc0000; }
+
+        /* PANEL ECONÓMICO */
         .panel-economico {
             background: #001a33;
             color: white;
             padding: 40px;
             border-radius: 20px;
-            box-shadow: 0 15px 35px rgba(0,0,0,0.3);
-            border-bottom: 8px solid var(--celeste);
+            margin-bottom: 30px;
+            clear: both;
         }
         .panel-economico h3 { color: var(--amarillo); text-align: center; margin-bottom: 30px; text-transform: uppercase; }
         .item-perdida { margin-bottom: 25px; }
-        .label-perdida { display: flex; justify-content: space-between; font-weight: 700; margin-bottom: 10px; font-size: 0.95rem; }
-        .barra-progreso { background: rgba(255,255,255,0.1); height: 35px; border-radius: 50px; overflow: hidden; border: 1px solid rgba(255,255,255,0.2); }
-        .relleno-progreso { height: 100%; background: var(--celeste); display: flex; align-items: center; padding-left: 20px; font-weight: 900; color: var(--azul-mar); font-size: 0.85rem; }
+        .label-perdida { display: flex; justify-content: space-between; font-weight: 700; margin-bottom: 10px; }
+        .barra-progreso { background: rgba(255,255,255,0.1); height: 35px; border-radius: 50px; overflow: hidden; }
+        .relleno-progreso { height: 100%; background: var(--celeste); display: flex; align-items: center; padding-left: 20px; font-weight: 900; color: var(--azul-mar); }
 
-        .info-footer-economico { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-top: 30px; text-align: center; }
-        .tarjeta-dato { background: rgba(255,255,255,0.05); padding: 15px; border-radius: 10px; }
-        .tarjeta-dato span { display: block; font-size: 1.4rem; font-weight: 900; color: var(--amarillo); }
+        footer { background: var(--azul-mar); color: white; padding: 100px 20px; text-align: center; clear: both; }
 
-        .tabla-aviones {
-            width: 100%;
-            border-collapse: collapse;
-            margin: 20px 0;
-            background: white;
-            border-radius: 10px;
-            overflow: hidden;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-        }
-        .tabla-aviones th { background: var(--azul-mar); color: white; padding: 15px; text-align: left; }
-        .tabla-aviones td { padding: 15px; border-bottom: 1px solid #eee; }
-
-        footer { background: var(--azul-mar); color: white; padding: 100px 20px; text-align: center; }
-
-        @media (max-width: 1024px) {
-            section { padding: 80px 5%; }
-            .layout { grid-template-columns: 1fr; }
-            .foto { height: 400px; order: -1; }
+        @media (max-width: 900px) {
+            .foto { width: 100%; float: none; margin: 0 0 30px 0; }
+            section { padding: 60px 5%; }
+            .subtitulo-moderno { font-size: 1.4rem; padding: 15px 20px; clip-path: none; }
         }
     </style>
 </head>
@@ -207,67 +193,59 @@
         <a href="#soberania">SOBERANÍA</a>
     </nav>
 
+    <!-- HISTORIA -->
     <section id="historia">
         <h2 class="subtitulo-moderno">Contexto Histórico</h2>
         <div class="layout">
+            <div class="foto izq" style="background-image: url('img/historia.jpg');"></div>
             <div class="texto">
-                <p>La disputa por las Islas Malvinas representa una de las heridas abiertas más profundas en la identidad nacional argentina, fundamentada en una usurpación violenta ocurrida en 1833. Aquel año, las fuerzas británicas expulsaron a las autoridades argentinas legítimas, rompiendo la integridad territorial de una nación joven que heredaba los derechos de la corona española.</p>
-                <p>Durante casi un siglo y medio, la diplomacia argentina intentó recuperar el archipiélago a través de foros internacionales. El desembarco del 2 de abril de 1982 fue el intento de recuperar por la fuerza lo que la diplomacia no lograba resolver.</p>
-                <div class="video-wrapper">
-                    <a href="https://youtube.com" target="_blank" class="btn-ver-video">VER VIDEO</a>
-                </div>
+                <p>La disputa por las Islas Malvinas constituye una de las problemáticas más profundas y persistentes de la identidad nacional argentina. Este conflicto hunde sus raíces en la usurpación violenta perpetrada por el Reino Unido en 1833, un acto que rompió de manera arbitraria con la integridad territorial de una nación joven que había heredado legítimamente estos territorios de la corona española. Desde aquel momento, Argentina nunca consintió la ocupación británica, manteniendo un reclamo diplomático incesante a lo largo de casi un siglo y medio en todos los foros internacionales. La importancia de este territorio no radica solo en la nostalgia histórica, sino en una sólida base jurídica respaldada por resoluciones de las Naciones Unidas que reconocen el enclave como una situación colonial que debe ser resuelta mediante el diálogo entre ambas partes.</p>
+                <p>El 2 de abril de 1982, tras décadas de negociaciones estancadas, se inició la recuperación militar del archipiélago, un hecho que movilizó los sentimientos patrióticos más profundos de toda la sociedad argentina. Si bien el conflicto bélico estuvo marcado por un contexto político interno complejo, la causa Malvinas trascendió cualquier gobierno para convertirse en un símbolo de unidad nacional. Comprender este contexto histórico permite a las nuevas generaciones, y especialmente a los alumnos de la educación técnica, dimensionar la importancia de defender el patrimonio nacional. La gesta representa el sacrificio de miles de ciudadanos que, en condiciones de extrema dificultad, reafirmaron que la soberanía nacional es un derecho irrenunciable que une el pasado, el presente y el futuro del pueblo argentino.</p>
+                <div class="video-wrapper"><a href="https://youtube.com" target="_blank" class="btn-ver-video">VER VIDEO</a></div>
             </div>
-            <div class="foto" style="background-image: url('img/historia.jpg');"></div>
         </div>
     </section>
 
+    <!-- BELGRANO -->
     <section id="belgrano">
         <h2 class="subtitulo-moderno">ARA General Belgrano</h2>
         <div class="layout">
-            <div class="foto" style="background-image: url('img/belgrano.jpg');"></div>
+            <div class="foto der" style="background-image: url('img/belgrano.jpg');"></div>
             <div class="texto">
-                <p>El 2 de mayo de 1982 el Crucero ARA General Belgrano fue atacado fuera de la zona de exclusión. Este acto se cobró la vida de 323 marinos argentinos, quienes se convirtieron en centinelas eternos de nuestras aguas. El sacrificio de su tripulación es un símbolo de entrega absoluta que marcó un punto de no retorno en el conflicto bélico.</p>
-                <p>Hoy, el Belgrano es un Monumento Histórico Nacional y una tumba de guerra protegida. Para las futuras generaciones de técnicos, su historia es un recordatorio de que la soberanía se defiende con honor.</p>
-                <div class="video-wrapper">
-                    <a href="https://youtube.com" target="_blank" class="btn-ver-video">VER VIDEO</a>
-                </div>
+                <p>El hundimiento del Crucero ARA General Belgrano, ocurrido el 2 de mayo de 1982, representa uno de los hitos más trágicos de la Guerra del Atlántico Sur. El buque fue atacado por el submarino nuclear HMS Conqueror fuera de la zona de exclusión, un hecho que eliminó cualquier posibilidad de salida diplomática. En este ataque perdieron la vida 323 marinos valientes que entregaron todo en cumplimiento del deber. El sacrificio de estos hombres transformó al Belgrano en un centinela eterno que custodia nuestras aguas desde las profundidades del mar, recordándonos permanentemente que la defensa de la plataforma continental argentina se ha pagado con el precio más alto: la vida de sus ciudadanos.</p>
+                <p>Para la comunidad de la EEST N°3, el Belgrano es un Monumento Histórico Nacional y un símbolo de integridad. Los sobrevivientes dejaron testimonios invaluables sobre la camaradería demostrada durante el naufragio en las gélidas aguas del sur. Su legado nos obliga a reflexionar sobre la responsabilidad de la formación técnica al servicio de la patria. La memoria del Belgrano sigue viva en cada homenaje, recordándonos que la soberanía nacional no es una abstracción, sino una realidad sostenida por el honor de quienes no dudaron en acudir al llamado de la nación en sus horas más difíciles.</p>
+                <div class="video-wrapper"><a href="https://youtube.com" target="_blank" class="btn-ver-video">VER VIDEO</a></div>
             </div>
         </div>
     </section>
 
+    <!-- COVENTRY -->
     <section id="coventry">
         <h2 class="subtitulo-moderno">HMS Coventry</h2>
         <div class="layout">
+            <div class="foto izq" style="background-image: url('img/coventry.jpg');"></div>
             <div class="texto">
-                <p>El 25 de mayo de 1982, los pilotos argentinos escribieron una de las páginas más audaces de la historia aérea mundial. Volando en misiones de ataque rasante, escuadrillas de aviones A-4B Skyhawk de la Fuerza Aérea lograron hundir al destructor HMS Coventry.</p>
-                <p>El hundimiento del Coventry demostró que la determinación humana y el ingenio táctico podían superar la superioridad tecnológica. Esta hazaña reafirmó el compromiso de nuestros combatientes de luchar con honor por el suelo argentino.</p>
-                <div class="video-wrapper">
-                    <a href="https://youtube.com" target="_blank" class="btn-ver-video">VER VIDEO</a>
-                </div>
+                <p>El 25 de mayo de 1982, la Fuerza Aérea Argentina escribió una página audaz al hundir al destructor británico HMS Coventry. Escuadrillas de aviones A-4B Skyhawk volaron en misiones de ataque rasante, situándose apenas a metros de las olas para evitar la detección de los radares enemigos. Esta maniobra exigía una pericia técnica y un coraje físico admirados mundialmente. Este éxito militar demostró la determinación inquebrantable de los combatientes argentinos por defender su territorio legítimo frente a una superioridad tecnológica abrumadora.</p>
+                <p>La hazaña del 25 de mayo se estudia hoy en las academias militares como ejemplo de ingenio táctico. Simboliza la capacidad del factor humano para superar limitaciones materiales mediante el profesionalismo. Para los estudiantes técnicos, resalta la importancia del mantenimiento operativo de los sistemas bajo presión. El coraje de aquellos pilotos, que enfrentaron fuego antiaéreo con sistemas convencionales, reafirmó el compromiso nacional y dejó un legado de orgullo que continúa inspirando a quienes valoran la técnica aplicada en la defensa de la soberanía argentina.</p>
+                <div class="video-wrapper"><a href="https://youtube.com" target="_blank" class="btn-ver-video">VER VIDEO</a></div>
             </div>
-            <div class="foto" style="background-image: url('img/coventry.jpg');"></div>
         </div>
     </section>
 
+    <!-- FUERZA AÉREA -->
     <section id="fuerza-aerea">
         <h2 class="subtitulo-moderno">Sistemas de Armas Aéreos</h2>
         <div class="layout">
-            <div class="foto" style="background-image: url('img/fuerza-aerea.jpg');"></div>
+            <div class="foto der" style="background-image: url('img/fuerza-aerea.jpg');"></div>
             <div class="texto">
-                <p>La actuación de la Fuerza Aérea Argentina asombró al mundo por la pericia técnica y el coraje de sus pilotos. Volando al ras del agua para evadir radares, los "Halcones" operaron sistemas de armas al límite de su capacidad.</p>
-                <table class="tabla-aviones">
-                    <tr><th>Avión</th><th>Detalle</th></tr>
-                    <tr><td>A-4 Skyhawk</td><td>Pilar del ataque a la flota.</td></tr>
-                    <tr><td>Super Étendard</td><td>Equipado con misiles Exocet.</td></tr>
-                    <tr><td>IA-58 Pucará</td><td>Avión de fabricación nacional.</td></tr>
-                </table>
-                <div class="video-wrapper">
-                    <a href="https://youtube.com" target="_blank" class="btn-ver-video">VER VIDEO</a>
-                </div>
+                <p>La actuación de la Fuerza Aérea Argentina asombró al mundo por la valentía de sus pilotos. El empleo de aviones como el Skyhawk y el Pucará (fabricación nacional) demostró la importancia de una industria de defensa propia. Detrás de cada despegue, hubo un equipo invisible de mecánicos y especialistas que trabajaron sin descanso para que cada sistema funcionara a la perfección. La soberanía técnica fue el pilar que permitió a los "Halcones" escribir páginas de gloria.</p>
+                <p>El profesionalismo de los equipos técnicos garantizó que la presencia argentina en el aire fuera una amenaza constante. Estudiar estos modelos de aviones es un reconocimiento al ingenio argentino que respondió con excelencia técnica. Para la EEST N°3, estas lecciones sobre logística e ingeniería son fundamentales para entender que la capacidad de operar y reparar equipos propios es lo que otorga independencia real a una nación frente a desafíos históricos de gran escala.</p>
+                <div class="video-wrapper"><a href="https://youtube.com" target="_blank" class="btn-ver-video">VER VIDEO</a></div>
             </div>
         </div>
     </section>
 
+    <!-- ECONOMÍA -->
     <section id="economia">
         <h2 class="subtitulo-moderno">Impacto y Pérdidas</h2>
         <div class="layout">
@@ -287,40 +265,36 @@
                 </div>
             </div>
             <div class="texto">
-                <p>La guerra aceleró un colapso económico estructural. El gasto militar y el bloqueo comercial asfixiaron la industria nacional. Para una escuela técnica, este análisis demuestra que la soberanía requiere un aparato productivo fuerte.</p>
-                <p>La soberanía tecnológica es la herramienta del siglo XXI.</p>
-                <div class="video-wrapper">
-                    <a href="https://youtube.com" target="_blank" class="btn-ver-video">VER VIDEO</a>
-                </div>
+                <p>La guerra de 1982 aceleró un colapso económico estructural. El gasto militar y el bloqueo comercial asfixiaron la industria nacional. Analizar estos indicadores permite comprender que la verdadera soberanía se construye mediante la solidez de los pilares productivos. La fragilidad financiera de aquel entonces condicionó la logística y dejó una deuda que hipotecó el crecimiento del país, recordándonos que una nación dependiente es siempre vulnerable.</p>
+                <p>Producir tecnología propia y fortalecer la industria son los actos de patriotismo que aseguran la independencia real en el siglo XXI. La formación técnica es el activo más valioso para evitar que el destino de la patria sea decidido en despachos extranjeros. Estudiar con compromiso es honrar a quienes lucharon, trabajando por una Argentina autosuficiente que sostenga sus reclamos soberanos con una economía fuerte y gestionada por profesionales conscientes.</p>
+                <div class="video-wrapper"><a href="https://youtube.com" target="_blank" class="btn-ver-video">VER VIDEO</a></div>
             </div>
         </div>
     </section>
 
+    <!-- VETERANOS -->
     <section id="veteranos">
         <h2 class="subtitulo-moderno">Nuestros Veteranos</h2>
         <div class="layout">
-            <div class="foto" style="background-image: url('img/veteranos.jpg');"></div>
+            <div class="foto der" style="background-image: url('img/veteranos.jpg');"></div>
             <div class="texto">
-                <p>Los 649 héroes que quedaron en las islas y los miles de veteranos que regresaron son el testimonio vivo de nuestra historia. Mantener viva su memoria es un ejercicio de justicia y gratitud.</p>
-                <p>¡Malvinas Argentinas hoy y siempre!</p>
-                <div class="video-wrapper">
-                    <a href="https://youtube.com" target="_blank" class="btn-ver-video">VER VIDEO</a>
-                </div>
+                <p>Los 649 héroes que entregaron su vida y los veteranos que regresaron son el testimonio sagrado de nuestra historia. Tras las hostilidades, enfrentaron años de olvido, pero su persistencia mantuvo viva la llama del reclamo. Ellos no son víctimas, son protagonistas de una gesta nacional que defendieron con honor en la turba malvinense. Escuchar sus relatos permite humanizar la historia y comprender que la soberanía se defiende con el cuerpo y el alma.</p>
+                <p>En la EEST N°3, "Prohibido Olvidar" es una práctica cotidiana. Mantener viva su memoria asegura que el sacrificio de 1982 sea la base de una conciencia nacional inquebrantable. Reconocer su esfuerzo nos obliga a construir una Argentina más justa, donde los valores de solidaridad demostrados sean el motor de nuestro desarrollo. Malvinas nos une, y la presencia de nuestros héroes nos recuerda que mientras haya memoria, las islas seguirán presentes en cada rincón.</p>
+                <div class="video-wrapper"><a href="https://youtube.com" target="_blank" class="btn-ver-video">VER VIDEO</a></div>
             </div>
         </div>
     </section>
 
+    <!-- SOBERANÍA -->
     <section id="soberania" style="border-bottom: none;">
         <h2 class="subtitulo-moderno">Soberanía Hoy</h2>
         <div class="layout">
+            <div class="foto izq" style="background-image: url('img/soberania.jpg');"></div>
             <div class="texto">
-                <p>La soberanía hoy se defiende con el estudio, la ciencia y la diplomacia. Malvinas representa la llave de nuestro futuro en el Atlántico Sur y nuestra proyección hacia la Antártida.</p>
-                <p>Desde la EEST N°3, reafirmamos que el conocimiento es nuestra herramienta más poderosa.</p>
-                <div class="video-wrapper">
-                    <a href="https://youtube.com" target="_blank" class="btn-ver-video">VER VIDEO</a>
-                </div>
+                <p>La soberanía argentina hoy se defiende con estudio, ciencia y diplomacia. Malvinas es la llave para nuestro futuro en el Atlántico Sur y la proyección hacia la Antártida. Mantener viva la causa en las aulas es el mejor homenaje a nuestros héroes. La plataforma continental y el mar que rodea al archipiélago son extensiones naturales que debemos proteger para asegurar la prosperidad de las futuras generaciones con fundamentos sólidos frente a la comunidad internacional.</p>
+                <p>El conocimiento es nuestra herramienta más poderosa. Educar sobre Malvinas es sembrar conciencia crítica sobre los derechos nacionales. Las islas son argentinas por historia y geografía. Cada proyecto realizado en nuestra escuela técnica es un paso hacia esa Argentina independiente. La causa nos une bajo un ideal de memoria y verdad, con la esperanza de que, mediante el esfuerzo colectivo, el pabellón nacional vuelva a flamear definitivamente en Puerto Argentino.</p>
+                <div class="video-wrapper"><a href="https://youtube.com" target="_blank" class="btn-ver-video">VER VIDEO</a></div>
             </div>
-            <div class="foto" style="background-image: url('img/soberania.jpg');"></div>
         </div>
     </section>
 
