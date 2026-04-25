@@ -209,14 +209,17 @@
             section { padding: 40px 6%; }
             .subtitulo-moderno { font-size: 1.2rem; padding: 15px 20px; margin-bottom: 30px; }
             
+            /* CORTE EXACTO A 3 RENGLONES EN MÓVIL */
             .texto p {
-                max-height: 200px; /* Ajustado para mostrar ~60-70 palabras */
+                display: -webkit-box;
+                -webkit-line-clamp: 3;
+                -webkit-box-orient: vertical;  
                 overflow: hidden;
-                display: block;
-                transition: max-height 0.6s ease-out;
+                transition: all 0.5s ease;
             }
             .texto p.expanded {
-                max-height: 4000px; 
+                display: block;
+                -webkit-line-clamp: unset;
                 overflow: visible;
             }
             .read-more-btn { display: block; }
@@ -249,20 +252,18 @@
         <a href="#soberania">SOBERANÍA</a>
     </nav>
 
-    <!-- HISTORIA -->
     <section id="historia">
         <h2 class="subtitulo-moderno">Contexto Histórico</h2>
         <div class="layout">
             <div class="foto izq" style="background-image: url('img/historia.jpg');"></div>
             <div class="texto">
-                <p>La disputa por las Islas Malvinas constituye una de las problemáticas más profundas y persistentes de la identidad nacional argentina. Este conflicto hunde sus raíces en la usurpación violenta perpetrada por el Reino Unido en 1833, un acto que rompió de manera arbitraria con la integridad territorial de una nación joven que había heredado legítimamente estos territorios de la corona española. Desde aquel momento, Argentina nunca consintió la ocupación británica, manteniendo un reclamo diplomático incesante a lo largo de casi un siglo y medio en todos los foros internacionales. La importancia de este territorio no radica solo en la nostalgia histórica, sino en una sólida base jurídica respaldada por resoluciones de las Naciones Unidas que reconocen el enclave como una situación colonial que debe ser resuelta mediante el diálogo entre ambas partes. El 2 de abril de 1982, tras décadas de negociaciones estancadas, se inició la recuperación militar del archipiélago, un hecho que movilizó los sentimientos patrióticos más profundos de toda la sociedad argentina. Si bien el conflicto bélico estuvo marcado por un contexto político interno complejo, la causa Malvinas trascendió cualquier gobierno para convertirse en un símbolo de unidad nacional. Comprender este contexto histórico permite a las nuevas generaciones, y especialmente a los alumnos de la educación técnica, dimensionar la importancia de defender el patrimonio nacional. La gesta representa el sacrificio de miles de ciudadanos que, en condiciones de extrema dificultad, reafirmaron que la soberanía nacional es un derecho irrenunciable que une el pasado, el presente y el futuro del pueblo argentino. Este legado constituye la base fundamental de nuestra conciencia colectiva.</p>
+                <p>La disputa por las Islas Malvinas constituye una de las problemáticas más profundas y persistentes de la identidad nacional argentina. Este conflicto hunde sus raíces en la usurpación violenta perpetrada por el Reino Unido en 1833, un acto que rompió de manera arbitraria con la integridad territorial de una nación joven que había heredado legítimamente estos territorios de la corona española. Desde aquel momento, Argentina nunca consintió la ocupación británica, manteniendo un reclamo diplomático incesante a lo largo de casi un siglo y medio en todos los foros internacionales. La importancia de este territorio no radica solo en la nostalgia histórica, sino en una sólida base jurídica respaldada por resoluciones de las Naciones Unidas que reconocen el enclave como una situación colonial que debe ser resuelta mediante el diálogo entre ambas partes. El 2 de abril de 1982, tras décadas de negociaciones estancadas, se inició la recuperación militar del archipiélago, un hecho que movilizó los sentimientos patrióticos más profundos de toda la sociedad argentina. Si bien el conflicto bélico estuvo marcado por un contexto político interno complejo, la causa Malvinas trascendió cualquier gobierno para convertirse en un símbolo de unidad nacional. Comprender este contexto histórico permite a las nuevas generaciones, y especialmente a los alumnos de la educación técnica, dimensionar la importancia de defender el patrimonio nacional. La gesta representa el sacrificio de miles de ciudadanos que, en condiciones de extrema dificultad, reafirmaron que la soberanía nacional es un derecho irrenunciable que une el pasado, el presente y el futuro del pueblo argentino. Este legado constituye nuestra identidad.</p>
                 <button class="read-more-btn">▾ Leer más</button>
                 <div class="video-wrapper"><a href="https://youtube.com" target="_blank" class="btn-ver-video">VER VIDEO</a></div>
             </div>
         </div>
     </section>
 
-    <!-- BELGRANO -->
     <section id="belgrano">
         <h2 class="subtitulo-moderno">ARA General Belgrano</h2>
         <div class="layout">
@@ -275,22 +276,32 @@
         </div>
     </section>
 
-    <!-- HMS COVENTRY -->
     <section id="coventry">
         <h2 class="subtitulo-moderno">HMS Coventry</h2>
         <div class="layout">
             <div class="foto izq" style="background-image: url('img/coventry.jpg');"></div>
             <div class="texto">
-                <p>El 25 de mayo de 1982, la Fuerza Aérea Argentina escribió una página audaz al hundir al destructor británico HMS Coventry. Escuadrillas de aviones A-4B Skyhawk volaron en misiones de ataque rasante, situándose apenas a metros de las olas para evitar la detección de los radares enemigos en una de las operaciones más peligrosas de la guerra. Esta maniobra exigía una pericia técnica y un coraje físico admirados mundialmente por expertos en aviación. Este éxito militar demostró la determinación inquebrantable de los combatientes argentinos por defender su territorio legítimo frente a una superioridad tecnológica abrumadora de la OTAN. La hazaña del 25 de mayo se estudia hoy en las academias militares como ejemplo de ingenio táctico y valentía suprema. Simboliza la capacidad del factor humano para superar limitaciones materiales mediante el profesionalismo y el adiestramiento riguroso. Para los estudiantes técnicos, resalta la importancia del mantenimiento operativo de los sistemas bajo presión extrema, donde cada tuerca y cada ajuste mecánico fueron vitales para el éxito de la misión. El coraje de aquellos pilotos, que enfrentaron fuego antiaéreo con sistemas convencionales y bombas que debían ser armadas manualmente, reafirmó el compromiso nacional y dejó un legado de orgullo que continúa inspirando a quienes valoran la técnica aplicada en la defensa de la soberanía argentina. El HMS Coventry se convirtió en un símbolo de que la tecnología no puede suplir la voluntad de un pueblo que lucha por lo que le pertenece por derecho histórico, geográfico y jurídico.</p>
+                <p>El 25 de mayo de 1982, la Fuerza Aérea Argentina escribió una página audaz al hundir al destructor británico HMS Coventry. Escuadrillas de aviones A-4B Skyhawk volaron en misiones de ataque rasante, situándose apenas a metros de las olas para evitar la detección de los radares enemigos en una de las operaciones más peligrosas de la guerra. Esta maniobra exigía una pericia técnica y un coraje físico admirados mundialmente por expertos en aviación. Este éxito militar demostró la determinación inquebrantable de los combatientes argentinos por defender su territorio legítimo frente a una superioridad tecnológica abrumadora de la OTAN. La hazaña del 25 de mayo se estudia hoy en las academias militares como ejemplo de ingenio táctico y valentía suprema. Simboliza la capacidad del factor humano para superar limitaciones materiales mediante el profesionalismo y el adiestramiento riguroso. Para los estudiantes técnicos, resalta la importancia del mantenimiento operativo de los sistemas bajo presión extrema, donde cada tuerca y cada ajuste mecánico fueron vitales para el éxito de la misión. El coraje de aquellos pilotos, que enfrentaron fuego antiaéreo con sistemas convencionales y bombas que debían ser armadas manualmente, reafirmó el compromiso nacional y dejó un legado de orgullo que continúa inspirando a quienes valoran la técnica aplicada en la defensa de la soberanía argentina. El HMS Coventry se convirtió en un símbolo de que la tecnología no puede suplir la voluntad de un pueblo que lucha por lo que le pertenece por derecho histórico.</p>
                 <button class="read-more-btn">▾ Leer más</button>
                 <div class="video-wrapper"><a href="https://youtube.com" target="_blank" class="btn-ver-video">VER VIDEO</a></div>
             </div>
         </div>
     </section>
 
-    <!-- ECONOMÍA -->
+    <section id="fuerza-aerea">
+        <h2 class="subtitulo-moderno">Fuerza Aérea</h2>
+        <div class="layout">
+            <div class="foto der" style="background-image: url('img/fuerza-aerea.jpg');"></div>
+            <div class="texto">
+                <p>La actuación de la Fuerza Aérea Argentina durante el conflicto del Atlántico Sur dejó una huella imborrable en la historia militar contemporánea. Los pilotos argentinos, operando en condiciones de inferioridad tecnológica frente a una flota moderna apoyada por inteligencia satelital, demostraron una destreza técnica y un valor personal que asombró a propios y ajenos. Cada salida desde el continente hacia las islas implicaba un riesgo extremo, no solo por el fuego enemigo, sino por la logística compleja de reabastecimiento en vuelo y la navegación a niveles mínimos sobre el mar para evitar ser detectados. Detrás de cada halcón en el cielo, existió un equipo terrestre de mecánicos, armeros y técnicos que trabajaron bajo un frío intenso y presión constante para asegurar que cada aeronave estuviera en condiciones de combate. Para una escuela técnica como la EEST N°3, este ejemplo de mantenimiento operativo y adaptabilidad frente a la falta de repuestos es una lección fundamental de ingeniería y patriotismo. El ingenio argentino permitió adaptar sistemas de armas y desarrollar tácticas nuevas que pusieron en jaque a la flota más poderosa del mundo. Este esfuerzo colectivo reafirma que la soberanía técnica es un pilar indispensable para la defensa nacional. El heroísmo de los que no regresaron y la pericia de los veteranos de aire son un faro de excelencia profesional para todos los estudiantes técnicos del país.</p>
+                <button class="read-more-btn">▾ Leer más</button>
+                <div class="video-wrapper"><a href="https://youtube.com" target="_blank" class="btn-ver-video">VER VIDEO</a></div>
+            </div>
+        </div>
+    </section>
+
     <section id="economia">
-        <h2 class="subtitulo-moderno">Impacto y Pérdidas</h2>
+        <h2 class="subtitulo-moderno">Impacto Económico</h2>
         <div class="layout">
             <div class="panel-economico">
                 <h3>Indicadores 1982</h3>
@@ -304,7 +315,31 @@
                 </div>
             </div>
             <div class="texto">
-                <p>La guerra de 1982 aceleró un colapso económico estructural que ya venía gestándose por años de inestabilidad financiera. El gasto militar masivo y el bloqueo comercial impuesto por las potencias europeas asfixiaron la industria nacional en un momento crítico del desarrollo. Analizar estos indicadores permite comprender que la verdadera soberanía se construye mediante la solidez de los pilares productivos y la independencia financiera real. La fragilidad de aquel entonces condicionó la logística y dejó una deuda que hipotecó el crecimiento del país por décadas, recordándonos que una nación dependiente es siempre vulnerable a las presiones externas. Producir tecnología propia y fortalecer la industria interna son los verdaderos actos de patriotismo que aseguran la libertad real en el siglo XXI. La formación técnica es el activo más valioso para evitar que el destino de la patria sea decidido en despachos extranjeros o condicionado por préstamos internacionales. Estudiar con compromiso hoy es honrar a quienes lucharon ayer, trabajando por una Argentina autosuficiente que sostenga sus reclamos soberanos con una economía fuerte y gestionada por profesionales técnicos conscientes de su realidad social. La soberanía económica es la base sobre la cual se asienta cualquier reclamo territorial exitoso a largo plazo para asegurar el bienestar de todos los ciudadanos.</p>
+                <p>La guerra de 1982 aceleró un colapso económico estructural que ya venía gestándose por años de inestabilidad financiera y políticas volátiles. El gasto militar masivo y el bloqueo comercial impuesto por las potencias europeas asfixiaron la industria nacional en un momento crítico de su desarrollo histórico. Analizar estos indicadores permite comprender que la verdadera soberanía se construye mediante la solidez de los pilares productivos, el desarrollo de tecnología propia y la independencia financiera real frente a los centros de poder mundial. La fragilidad de aquel entonces condicionó la logística militar y dejó una deuda que hipotecó el crecimiento del país por décadas, recordándonos que una nación dependiente es siempre vulnerable a las presiones externas en momentos de crisis. Producir tecnología propia y fortalecer la industria interna son los verdaderos actos de patriotismo que aseguran la libertad real en el siglo XXI. La formación técnica es el activo más valioso para evitar que el destino de la patria sea decidido en despachos extranjeros o condicionado por préstamos internacionales que limitan nuestra capacidad de decisión. Estudiar con compromiso hoy es honrar a quienes lucharon ayer, trabajando por una Argentina autosuficiente que sostenga sus reclamos soberanos con una economía fuerte y gestionada por profesionales técnicos conscientes de su realidad social. La soberanía económica es la base indispensable de la libertad.</p>
+                <button class="read-more-btn">▾ Leer más</button>
+                <div class="video-wrapper"><a href="https://youtube.com" target="_blank" class="btn-ver-video">VER VIDEO</a></div>
+            </div>
+        </div>
+    </section>
+
+    <section id="veteranos">
+        <h2 class="subtitulo-moderno">Nuestros Veteranos</h2>
+        <div class="layout">
+            <div class="foto der" style="background-image: url('img/veteranos.jpg');"></div>
+            <div class="texto">
+                <p>Los 649 héroes que entregaron su vida en el Atlántico Sur y los miles de veteranos que regresaron al continente son el testimonio sagrado de nuestra historia contemporánea. Tras las hostilidades, estos hombres enfrentaron años de indiferencia y un proceso de "desmalvinización" que intentó ocultar su valentía bajo el manto del olvido político. Sin embargo, su persistencia y organización mantuvieron viva la llama del reclamo soberano en cada rincón del país. Ellos no son víctimas, son protagonistas de una gesta nacional que defendieron con honor en la turba malvinense, en el mar frío y en los cielos en disputa. Escuchar sus relatos permite humanizar la historia y comprender que la soberanía se defiende con el cuerpo, el alma y una convicción que trasciende el tiempo. En la EEST N°3, el lema "Prohibido Olvidar" no es una frase vacía, sino una práctica cotidiana de memoria activa. Reconocer su esfuerzo nos obliga a construir una Argentina más justa y solidaria, donde los valores demostrados en combate sean el motor de nuestro desarrollo civil. La causa Malvinas nos une por encima de cualquier diferencia, y la presencia de nuestros héroes nos recuerda que mientras haya memoria, las islas seguirán presentes en cada aula y en cada corazón argentino. El respeto a su sacrificio es el cimiento de nuestra dignidad como pueblo soberano.</p>
+                <button class="read-more-btn">▾ Leer más</button>
+                <div class="video-wrapper"><a href="https://youtube.com" target="_blank" class="btn-ver-video">VER VIDEO</a></div>
+            </div>
+        </div>
+    </section>
+
+    <section id="soberania">
+        <h2 class="subtitulo-moderno">Soberanía Hoy</h2>
+        <div class="layout">
+            <div class="foto izq" style="background-image: url('img/soberania.jpg');"></div>
+            <div class="texto">
+                <p>En el siglo XXI, la soberanía argentina se defiende primordialmente a través del conocimiento, la ciencia, el desarrollo tecnológico y la diplomacia persistente. Malvinas no es solo un recuerdo del pasado, sino la llave estratégica para nuestro futuro en el Atlántico Sur y nuestra proyección legítima hacia la Antártida. Mantener viva la causa en las aulas es el mejor homenaje que podemos rendir a quienes dieron todo por la patria en 1982. La protección de nuestra plataforma continental y los recursos naturales de nuestro mar es una responsabilidad que debemos asumir con fundamentos sólidos frente a la comunidad internacional. El conocimiento técnico y científico es nuestra herramienta más poderosa para demostrar los derechos inalienables de la nación sobre sus territorios ocupados. Educar sobre Malvinas es sembrar una conciencia crítica y un sentido de pertenencia en las nuevas generaciones. Las islas son argentinas por geografía, por historia y por derecho jurídico internacional. Cada proyecto realizado en nuestra escuela técnica, cada estudio sobre logística o ingeniería, es un paso firme hacia esa Argentina independiente y desarrollada que soñamos. La causa nos une bajo un ideal de verdad y justicia, con la esperanza firme de que, mediante el esfuerzo colectivo y la inteligencia nacional, el pabellón celeste y blanco vuelva a flamear de manera definitiva y soberana en Puerto Argentino.</p>
                 <button class="read-more-btn">▾ Leer más</button>
                 <div class="video-wrapper"><a href="https://youtube.com" target="_blank" class="btn-ver-video">VER VIDEO</a></div>
             </div>
