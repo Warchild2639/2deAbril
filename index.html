@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>2 de Abril: Gesta de Soberanía - EEST N°3</title>
+    <!-- Importación correcta de Google Fonts -->
     <link href="https://googleapis.com" rel="stylesheet">
     <style>
         :root {
@@ -66,7 +67,7 @@
             z-index: 1000;
             box-shadow: 0 5px 20px rgba(0,0,0,0.15);
         }
-        
+
         .nav-item { position: relative; display: inline-block; outline: none; }
 
         nav a, .dropbtn { 
@@ -171,6 +172,7 @@
             transition: 0.3s;
         }
 
+        /* PANEL ECONÓMICO */
         .panel-economico { 
             background: #000b14; 
             color: white; 
@@ -204,6 +206,7 @@
             text-transform: uppercase;
         }
 
+        /* RESPONSIVE */
         @media (max-width: 900px) {
             header { height: 60vh; }
             .header-content h1 { font-size: 3.5rem; }
@@ -211,16 +214,15 @@
             section { padding: 40px 6%; }
             .subtitulo-moderno { font-size: 1.2rem; padding: 15px 20px; margin-bottom: 30px; }
             
-            /* APLICAR A TODOS LOS PÁRRAFOS DE LAS SECCIONES */
-            .texto p {
+            /* APLICAR COLAPSO A PÁRRAFOS Y PANEL ECONÓMICO */
+            .texto p, .panel-economico {
                 display: -webkit-box !important;
                 -webkit-line-clamp: 3 !important;
                 -webkit-box-orient: vertical !important;  
                 overflow: hidden !important;
                 text-overflow: ellipsis;
-                transition: none;
             }
-            .texto p.expanded {
+            .texto p.expanded, .panel-economico.expanded {
                 display: block !important;
                 -webkit-line-clamp: unset !important;
                 overflow: visible !important;
@@ -261,9 +263,9 @@
         <div class="layout">
             <div class="foto izq" style="background-image: url('img/historia.jpg');"></div>
             <div class="texto">
-                <p>La disputa por las Islas Malvinas constituye una de las problemáticas más profundas y persistentes de la identidad nacional argentina. Este conflicto hunde sus raíces en la usurpación violenta perpetrada por el Reino Unido en 1833, un acto que rompió de manera arbitraria con la integridad territorial de una nación joven que había heredado legítimamente estos territorios de la corona española. Desde aquel momento, Argentina nunca consintió la ocupación británica, manteniendo un reclamo diplomático incesante a lo largo de casi un siglo y medio en todos los foros internacionales. La importancia de este territorio no radica solo en la nostalgia histórica, sino en una sólida base jurídica respaldada por resoluciones de las Naciones Unidas que reconocen el enclave como una situación colonial que debe ser resuelta mediante el diálogo entre ambas partes. El 2 de abril de 1982, tras décadas de negociaciones estancadas, se inició la recuperación militar del archipiélago, un hecho que movilizó los sentimientos patrióticos más profundos de toda la sociedad argentina. Si bien el conflicto bélico estuvo marcado por un contexto político interno complejo, la causa Malvinas trascendió cualquier gobierno para convertirse en un símbolo de unidad nacional. Comprender este contexto histórico permite a las nuevas generaciones, y especialmente a los alumnos de la educación técnica, dimensionar la importancia de defender el patrimonio nacional. La gesta representa el sacrificio de miles de ciudadanos que reafirmaron que la soberanía nacional es un derecho irrenunciable.</p>
+                <p>La disputa por las Islas Malvinas constituye una de las problemáticas más profundas y persistentes de la identidad nacional argentina. Este conflicto hunde sus raíces en la usurpación violenta perpetrada por el Reino Unido en 1833, un acto que rompió de manera arbitraria con la integridad territorial de una nación joven que había heredado legítimamente estos territorios de la corona española. Desde aquel momento, Argentina nunca consintió la ocupación británica, manteniendo un reclamo diplomático incesante a lo largo de casi un siglo y medio en todos los foros internacionales. La importancia de este territorio no radica solo en la nostalgia histórica, sino en una sólida base jurídica respaldada por resoluciones de las Naciones Unidas que reconocen el enclave como una situación colonial que debe ser resuelta mediante el diálogo entre ambas partes.</p>
                 <button class="read-more-btn">▾ Leer más</button>
-                <div class="video-wrapper"><a href="https://www.youtube.com/watch?v=YJ4afmY38SI&t" target="_blank" class="btn-ver-video">VER VIDEO</a></div>
+                <div class="video-wrapper"><a href="https://youtube.com" target="_blank" class="btn-ver-video">VER VIDEO</a></div>
             </div>
         </div>
     </section>
@@ -274,7 +276,7 @@
         <div class="layout">
             <div class="foto der" style="background-image: url('img/belgrano.jpg');"></div>
             <div class="texto">
-                <p>El hundimiento del Crucero ARA General Belgrano, ocurrido el 2 de mayo de 1982, representa uno de los hitos más trágicos de la Guerra del Atlántico Sur. El buque fue atacado por el submarino nuclear HMS Conqueror fuera de la zona de exclusión, un hecho que eliminó cualquier posibilidad de salida diplomática y escaló el conflicto de manera irreversible. En este ataque perdieron la vida 323 marinos valientes que entregaron todo en cumplimiento del deber. El sacrificio de estos hombres transformó al Belgrano en un centinela eterno que custodia nuestras aguas desde las profundidades del mar, recordándonos permanentemente que la defensa de la plataforma continental argentina se ha pagado con el precio más alto: la vida de sus ciudadanos. Para la comunidad de la EEST N°3, el Belgrano es un Monumento Histórico Nacional y un símbolo de integridad inquebrantable. Los sobrevivientes dejaron testimonios invaluables sobre la camaradería demostrada durante el naufragio en las gélidas aguas del sur, donde el apoyo mutuo fue la única herramienta de supervivencia frente a la adversidad. Su legado nos obliga a reflexionar sobre la responsabilidad de la formación técnica al servicio de la patria y la importancia de la ingeniería naval en nuestra soberanía. La memoria del Belgrano sigue viva en cada homenaje, recordándonos que la soberanía nacional no es una abstracción, sino una realidad sostenida por el honor de quienes no dudaron en acudir al llamado de la nación en sus horas más difíciles.</p>
+                <p>El hundimiento del Crucero ARA General Belgrano, ocurrido el 2 de mayo de 1982, representa uno de los hitos más trágicos de la Guerra del Atlántico Sur. El buque fue atacado por el submarino nuclear HMS Conqueror fuera de la zona de exclusión, un hecho que eliminó cualquier posibilidad de salida diplomática y escaló el conflicto de manera irreversible. En este ataque perdieron la vida 323 marinos valientes que entregaron todo en cumplimiento del deber. El sacrificio de estos hombres transformó al Belgrano en un centinela eterno que custodia nuestras aguas desde las profundidades del mar, recordándonos permanentemente que la defensa de la plataforma continental argentina se ha pagado con el precio más alto: la vida de sus ciudadanos.</p>
                 <button class="read-more-btn">▾ Leer más</button>
                 <div class="video-wrapper"><a href="https://youtube.com" target="_blank" class="btn-ver-video">VER VIDEO</a></div>
             </div>
@@ -287,7 +289,7 @@
         <div class="layout">
             <div class="foto izq" style="background-image: url('img/coventry.jpg');"></div>
             <div class="texto">
-                <p>El 25 de mayo de 1982, la Fuerza Aérea Argentina escribió una página audaz al hundir al destructor británico HMS Coventry. Escuadrillas de aviones A-4B Skyhawk volaron en misiones de ataque rasante, situándose apenas a metros de las olas para evitar la detección de los radares enemigos en una de las operaciones más peligrosas de la guerra. Esta maniobra exigía una pericia técnica y un coraje físico admirados mundialmente por expertos en aviación. Este éxito militar demostró la determinación inquebrantable de los combatientes argentinos por defender su territorio legítimo frente a una superioridad tecnológica abrumadora de la OTAN. La hazaña del 25 de mayo se estudia hoy en las academias militares como ejemplo de ingenio táctico y valentía suprema. Simboliza la capacidad del factor humano para superar limitaciones materiales mediante el profesionalismo y el adiestramiento riguroso. Para los estudiantes técnicos, resalta la importancia del mantenimiento operativo de los sistemas bajo presión extrema, donde cada tuerca y cada ajuste mecánico fueron vitales para el éxito de la misión. El coraje de aquellos pilotos, que enfrentaron fuego antiaéreo con sistemas convencionales y bombas que debían ser armadas manualmente, reafirmó el compromiso nacional y dejó un legado de orgullo que continúa inspirando a quienes valoran la técnica aplicada en la defensa de la soberanía argentina. El HMS Coventry es el símbolo de la voluntad sobre la tecnología.</p>
+                <p>El 25 de mayo de 1982, la Fuerza Aérea Argentina escribió una página audaz al hundir al destructor británico HMS Coventry. Escuadrillas de aviones A-4B Skyhawk volaron en misiones de ataque rasante, situándose apenas a metros de las olas para evitar la detección de los radares enemigos en una de las operaciones más peligrosas de la guerra. Esta maniobra exigía una pericia técnica y un coraje físico admirados mundialmente por expertos en aviación. Este éxito militar demostró la determinación inquebrantable de los combatientes argentinos por defender su territorio legítimo frente a una superioridad tecnológica abrumadora de la OTAN. La hazaña del 25 de mayo se estudia hoy en las academias militares como ejemplo de ingenio táctico.</p>
                 <button class="read-more-btn">▾ Leer más</button>
                 <div class="video-wrapper"><a href="https://youtube.com" target="_blank" class="btn-ver-video">VER VIDEO</a></div>
             </div>
@@ -300,7 +302,7 @@
         <div class="layout">
             <div class="foto der" style="background-image: url('img/fuerza-aerea.jpg');"></div>
             <div class="texto">
-                <p>La actuación de la Fuerza Aérea Argentina asombró al mundo por la valentía de sus pilotos. El empleo de aviones como el Skyhawk y el Pucará (fabricación nacional) demostró la importancia crítica de contar con una industria de defensa propia y soberana. Detrás de cada despegue exitoso, hubo un equipo invisible de mecánicos, armeros y especialistas técnicos que trabajaron sin descanso, muchas veces en condiciones precarias en el sur, para que cada sistema funcionara a la perfección. Para los alumnos de la EEST N°3, este es el ejemplo máximo de profesionalismo técnico: la capacidad de mantener operativos sistemas complejos bajo la presión de un conflicto bélico real. La soberanía técnica fue el pilar fundamental que permitió a los "Halcones" escribir páginas de gloria en la historia militar contemporánea. Estudiar estos modelos de aviones y su mantenimiento es un reconocimiento al ingenio argentino que respondió con excelencia técnica frente a un enemigo con superioridad tecnológica. El profesionalismo de los equipos de tierra garantizó que la presencia argentina en el aire fuera una amenaza constante para la flota británica durante todo el conflicto. Entender estas lecciones sobre logística e ingeniería es fundamental para comprender que la capacidad de operar y reparar equipos propios es lo que otorga independencia real a una nación frente a desafíos históricos de gran escala. El heroísmo se forjó en el aire, pero se sostuvo en los hangares y bases con el esfuerzo técnico nacional.</p>
+                <p>La actuación de la Fuerza Aérea Argentina asombró al mundo por la valentía de sus pilotos. El empleo de aviones como el Skyhawk y el Pucará (fabricación nacional) demostró la importancia crítica de contar con una industria de defensa propia y soberana. Detrás de cada despegue exitoso, hubo un equipo invisible de mecánicos, armeros y especialistas técnicos que trabajaron sin descanso, muchas veces en condiciones precarias en el sur, para que cada sistema funcionara a la perfección. Para los alumnos de la EEST N°3, este es el ejemplo máximo de profesionalismo técnico: la capacidad de mantener operativos sistemas complejos bajo la presión de un conflicto bélico real.</p>
                 <button class="read-more-btn">▾ Leer más</button>
                 <div class="video-wrapper"><a href="https://youtube.com" target="_blank" class="btn-ver-video">VER VIDEO</a></div>
             </div>
@@ -323,7 +325,7 @@
                 </div>
             </div>
             <div class="texto">
-                <p>La guerra de 1982 aceleró un colapso económico estructural que ya venía gestándose. El gasto militar masivo y el bloqueo comercial impuesto asfixiaron la industria nacional. Analizar estos indicadores permite comprender que la verdadera soberanía se construye mediante la solidez de los pilares productivos y la independencia financiera. La fragilidad de aquel entonces condicionó la logística y dejó una deuda que hipotecó el crecimiento del país por décadas, recordándonos que una nación dependiente es siempre vulnerable a presiones externas. Producir tecnología propia y fortalecer la industria interna son los verdaderos actos de patriotismo que aseguran la libertad real en el siglo XXI. La formación técnica es el activo más valioso para evitar que el destino de la patria sea decidido en despachos extranjeros. Estudiar con compromiso hoy es honrar a quienes lucharon ayer, trabajando por una Argentina autosuficiente que sostenga sus reclamos soberanos con una economía fuerte y gestionada por profesionales técnicos conscientes de su realidad social. La soberanía económica es la base de la libertad nacional.</p>
+                <p>La guerra de 1982 aceleró un colapso económico estructural que ya venía gestándose. El gasto militar masivo y el bloqueo comercial impuesto asfixiaron la industria nacional. Analizar estos indicadores permite comprender que la verdadera soberanía se construye mediante la solidez de los pilares productivos y la independencia financiera. La fragilidad de aquel entonces condicionó la logística y dejó una deuda que hipotecó el crecimiento del país por décadas, recordándonos que una nación dependiente es siempre vulnerable a presiones externas.</p>
                 <button class="read-more-btn">▾ Leer más</button>
                 <div class="video-wrapper"><a href="https://youtube.com" target="_blank" class="btn-ver-video">VER VIDEO</a></div>
             </div>
@@ -336,7 +338,7 @@
         <div class="layout">
             <div class="foto der" style="background-image: url('img/veteranos.jpg');"></div>
             <div class="texto">
-                <p>Los 649 héroes que entregaron su vida y los veteranos que regresaron son el testimonio sagrado de nuestra historia nacional. Tras las hostilidades, enfrentaron años de olvido, pero su persistencia mantuvo viva la llama del reclamo. Ellos no son víctimas, son protagonistas de una gesta nacional que defendieron con honor en la turba malvinense, en el mar y en el aire. Escuchar sus relatos permite humanizar la historia y comprender que la soberanía se defiende con el cuerpo y el alma. En la EEST N°3, "Prohibido Olvidar" es una práctica cotidiana de memoria activa. Mantener viva su memoria asegura que el sacrificio de 1982 sea la base de una conciencia nacional inquebrantable. Reconocer su esfuerzo nos obliga a construir una Argentina más justa, donde los valores de solidaridad demostrados en las islas sean el motor de nuestro desarrollo. Malvinas nos une, y la presencia de nuestros héroes nos recuerda que mientras haya memoria, las islas seguirán presentes en cada rincón del país. El respeto a los veteranos es un deber de todos los ciudadanos.</p>
+                <p>Los 649 héroes que entregaron su vida y los veteranos que regresaron son el testimonio sagrado de nuestra historia nacional. Tras las hostilidades, enfrentaron años de olvido, pero su persistencia mantuvo viva la llama del reclamo. Ellos no son víctimas, son protagonistas de una gesta nacional que defendieron con honor en la turba malvinense, en el mar y en el aire. Escuchar sus relatos permite humanizar la historia y comprender que la soberanía se defiende con el cuerpo y el alma. En la EEST N°3, "Prohibido Olvidar" es una práctica cotidiana de memoria activa.</p>
                 <button class="read-more-btn">▾ Leer más</button>
                 <div class="video-wrapper"><a href="https://youtube.com" target="_blank" class="btn-ver-video">VER VIDEO</a></div>
             </div>
@@ -349,7 +351,7 @@
         <div class="layout">
             <div class="foto izq" style="background-image: url('img/soberania.jpg');"></div>
             <div class="texto">
-                <p>En el presente, la soberanía argentina se defiende con estudio, ciencia y diplomacia. Malvinas es la llave para nuestro futuro en el Atlántico Sur y nuestra proyección legítima hacia la Antártida. Mantener viva la causa en las aulas es el mejor homenaje a nuestros héroes. La plataforma continental y el mar que rodea al archipiélago son extensiones naturales que debemos proteger para asegurar la prosperidad de las futuras generaciones con fundamentos sólidos frente a la comunidad internacional. El conocimiento es nuestra herramienta más poderosa: educar sobre Malvinas es sembrar conciencia crítica sobre los derechos nacionales. Cada proyecto realizado en nuestra escuela técnica es un paso hacia esa Argentina independiente que soñamos. La causa nos une bajo un ideal de memoria y verdad, con la esperanza de que, mediante el esfuerzo colectivo y la excelencia profesional, el pabellón nacional vuelva a flamear definitivamente en Puerto Argentino. La soberanía se construye cada día desde la educación técnica y el compromiso con la patria.</p>
+                <p>En el presente, la soberanía argentina se defiende con estudio, ciencia y diplomacia. Malvinas es la llave para nuestro futuro en el Atlántico Sur y nuestra proyección legítima hacia la Antártida. Mantener viva la causa en las aulas es el mejor homenaje a nuestros héroes. La plataforma continental y el mar que rodea al archipiélago son extensiones naturales que debemos proteger para asegurar la prosperidad de las futuras generaciones con fundamentos sólidos frente a la comunidad internacional. El conocimiento es nuestra herramienta más poderosa.</p>
                 <button class="read-more-btn">▾ Leer más</button>
                 <div class="video-wrapper"><a href="https://youtube.com" target="_blank" class="btn-ver-video">VER VIDEO</a></div>
             </div>
@@ -363,17 +365,17 @@
 </div>
 
 <script>
-    // Seleccionamos todos los botones de "Leer más"
     document.querySelectorAll('.read-more-btn').forEach(btn => {
         btn.addEventListener('click', function() {
-            // Buscamos el párrafo que está dentro del mismo bloque de texto que el botón
-            const parrafo = this.closest('.texto').querySelector('p');
+            // Buscamos el elemento colapsable (párrafo o panel económico) en el bloque actual
+            const contenedorPadre = this.closest('.layout');
+            const elementoColapsable = contenedorPadre.querySelector('p, .panel-economico');
             
-            if (parrafo.classList.contains('expanded')) {
-                parrafo.classList.remove('expanded');
+            if (elementoColapsable.classList.contains('expanded')) {
+                elementoColapsable.classList.remove('expanded');
                 this.textContent = '▾ Leer más';
             } else {
-                parrafo.classList.add('expanded');
+                elementoColapsable.classList.add('expanded');
                 this.textContent = '▴ Leer menos';
             }
         });
