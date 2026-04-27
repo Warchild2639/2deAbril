@@ -19,7 +19,6 @@
         * { box-sizing: border-box; }
         body { margin: 0; font-family: 'Montserrat', sans-serif; scroll-behavior: smooth; background: #f4f4f4; color: #333; overflow-x: hidden; }
 
-        /* HEADER */
         header { 
             height: 90vh; display: flex; align-items: center; justify-content: center; color: white; text-align: center;
             background: linear-gradient(rgba(0, 51, 102, 0.5), rgba(0, 51, 102, 0.8)), url('img/header-bg.jpg'); 
@@ -29,21 +28,18 @@
         .header-content h1 { font-size: clamp(3rem, 10vw, 8rem); margin: 0; font-weight: 900; text-transform: uppercase; text-shadow: 0 10px 30px rgba(0,0,0,0.6); animation: float 4s ease-in-out infinite; }
         @keyframes float { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-20px); } }
 
-        /* NAVEGACIÓN */
         nav { background: #ffffff; padding: 10px; display: flex; justify-content: center; flex-wrap: wrap; gap: 10px; border-bottom: 6px solid var(--celeste); position: sticky; top: 0; z-index: 1000; box-shadow: 0 5px 20px rgba(0,0,0,0.15); }
         nav a, .dropbtn { text-decoration: none; color: var(--azul-mar); font-weight: 900; text-transform: uppercase; font-size: 0.85rem; padding: 12px 18px; border-radius: 8px; transition: all 0.3s ease; cursor: pointer; border: none; background: none; font-family: inherit; }
         nav a:hover, .nav-item:hover .dropbtn { color: white; background-color: var(--azul-mar); }
         
-        /* TRIVIA DESTACADA */
+        /* TRIVIA DESTACADA EN NAV */
         nav a[href="#trivia"] { background-color: var(--amarillo); color: var(--azul-mar); }
-        nav a[href="#trivia"]:hover { background-color: var(--azul-mar); color: white; }
 
         .nav-item { position: relative; display: inline-block; }
         .dropdown-content { opacity: 0; visibility: hidden; position: absolute; background-color: #ffffff; min-width: 220px; box-shadow: 0px 8px 16px rgba(0,0,0,0.2); border-radius: 0 0 8px 8px; z-index: 1; top: 100%; left: 0; border-top: 3px solid var(--amarillo); transform: translateY(10px); transition: 0.4s; }
         .dropdown-content a { color: var(--azul-mar); padding: 12px 16px; text-decoration: none; display: block; text-align: left; font-size: 0.8rem; }
         .nav-item:hover .dropdown-content { opacity: 1; visibility: visible; transform: translateY(0); }
 
-        /* SECCIONES Y TEXTO */
         section { padding: 100px 10%; max-width: 1400px; margin: 0 auto; }
         .subtitulo-moderno { display: block; width: 100%; background: var(--azul-mar); color: white; padding: 20px 50px; font-weight: 900; font-size: 1.8rem; margin-bottom: 60px; text-transform: uppercase; border-left: 15px solid var(--amarillo); clip-path: polygon(0 0, 98% 0, 100% 50%, 98% 100%, 0 100%); }
         .layout { display: block; width: 100%; clear: both; }
@@ -64,14 +60,12 @@
         .foto.der { float: right; margin-left: 40px; }
 
         /* GRÁFICO ECONOMÍA */
-        .contenedor-grafico { width: 100%; background: white; padding: 20px; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); margin-bottom: 40px; border: 2px solid var(--celeste); }
-        .img-grafico { width: 100%; height: auto; border-radius: 10px; }
+        .contenedor-grafico { width: 100%; background: white; padding: 20px; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); margin-bottom: 40px; border: 2px solid var(--celeste); text-align: center; }
+        .img-grafico { max-width: 100%; height: auto; border-radius: 10px; }
 
-        /* BOTÓN YOUTUBE */
         .btn-video { display: inline-flex; align-items: center; background-color: var(--rojo-yt); color: white !important; text-decoration: none; padding: 12px 25px; border-radius: 50px; font-weight: 900; font-size: 0.9rem; margin-top: 10px; transition: 0.3s; text-transform: uppercase; }
         .btn-video::before { content: '▶'; margin-right: 10px; }
 
-        /* TRIVIA */
         .trivia-container { background: white; padding: 40px; border-radius: 20px; border: 2px solid #eee; }
         .btn-trivia { background: #f8f9fa; border: 2px solid #eee; padding: 15px 25px; border-radius: 12px; cursor: pointer; font-weight: 700; margin-right: 10px; margin-bottom: 10px; }
         .btn-trivia.correcta { background: var(--verde-exito) !important; color: white !important; }
@@ -108,99 +102,8 @@
         <a href="#trivia">TRIVIA</a>
     </nav>
 
-    <!-- SECCIONES ANTERIORES (Historia, Belgrano, Coventry, Fuerza Aérea se mantienen igual) -->
-    <section id="historia">
-        <h2 class="subtitulo-moderno">Contexto Histórico</h2>
-        <div class="layout">
-            <div class="foto izq" style="background-image: url('img/historia.jpg');"></div>
-            <div class="texto">
-                <p>La disputa por las Islas Malvinas constituye una de las problemáticas más profundas y persistentes de la identidad nacional argentina. Este conflicto hunde sus raíces en la usurpación violenta perpetrada por el Reino Unido en 1833, un acto que rompió de manera arbitraria con la integridad territorial de una nación joven que había heredado legítimamente estos territorios de la corona española. Desde aquel momento, Argentina nunca consintió la ocupación británica, manteniendo un reclamo diplomático incesante a lo largo de casi un siglo y medio en todos los foros internacionales. La importancia de este territorio no radica solo en la nostalgia histórica, sino en una sólida base jurídica respaldada por resoluciones de las Naciones Unidas que reconocen el enclave como una situación colonial que debe ser resuelta mediante el diálogo entre ambas partes. El 2 de abril de 1982, tras décadas de negociaciones estancadas, se inició la recuperación militar del archipiélago, un hecho que movilizó los sentimientos patrióticos más profundos de toda la sociedad argentina. Si bien el conflicto bélico estuvo marcado por un contexto político interno complejo, la causa Malvinas trascendió cualquier gobierno para convertirse en un símbolo de unidad nacional. Comprender este contexto histórico permite a las nuevas generaciones, y especialmente a los alumnos de la educación técnica, dimensionar la importancia de defender el patrimonio nacional. La gesta representa el sacrificio de miles de ciudadanos que reafirmaron que la soberanía nacional es un derecho irrenunciable y que la memoria es una herramienta de construcción futura para el desarrollo de nuestro país en un marco de paz y justicia.</p>
-                <button class="read-more-btn">▾ Leer más</button>
-                <a href="https://youtube.com" target="_blank" class="btn-video">Ver Documental Historia</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- ECONOMÍA CORREGIDA -->
+    <!-- ECONOMÍA -->
     <section id="economia">
         <h2 class="subtitulo-moderno">Impacto Económico</h2>
         <div class="contenedor-grafico">
-            <img src="img/grafico-economia-1982.jpg" alt="Gráfico de Inflación y PBI 1982" class="img-grafico">
-            <p style="text-align:center; font-weight:bold; color:var(--azul-mar); margin-top:10px;">Fig. 1: Evolución de la Inflación y Gasto Público durante el conflicto bélico.</p>
-        </div>
-        <div class="layout">
-            <div class="texto">
-                <p>La guerra de 1982 aceleró un colapso económico estructural que ya venía gestándose debido a políticas internas previas. El gasto militar masivo y el bloqueo comercial impuesto por las potencias asfixiaron la industria nacional, revelando la fragilidad de un sistema dependiente. Analizar estos indicadores permite comprender que la verdadera soberanía se construye mediante la solidez de los pilares productivos, la independencia financiera y la capacidad de generar valor agregado localmente. La fragilidad de aquel entonces condicionó la logística de las fuerzas y dejó una deuda que hipotecó el crecimiento del país por décadas, recordándonos que una nación económicamente dependiente es siempre vulnerable a las presiones externas. Producir tecnología propia y fortalecer la industria interna son los verdaderos actos de patriotismo que aseguran la libertad real en el escenario del siglo XXI. La formación técnica es el activo más valioso de una nación para evitar que su destino sea decidido en despachos extranjeros. Estudiar con compromiso hoy es honrar a quienes lucharon ayer, trabajando por una Argentina autosuficiente que sostenga sus reclamos soberanos con una economía fuerte y diversificada. Es indispensable entender que los recursos naturales de Malvinas, como la pesca y el petróleo, son claves para la recuperación económica futura. Una nación que conoce sus recursos es una nación que puede defenderlos con argumentos sólidos y un desarrollo técnico que le permita explotarlos de manera sustentable y soberana para el bienestar de todos sus habitantes.</p>
-                <button class="read-more-btn">▾ Leer más</button>
-                <a href="https://youtube.com" target="_blank" class="btn-video">Análisis Económico 1982</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- JORGE PÉREZ CORREGIDO -->
-    <section id="jorge-perez">
-        <h2 class="subtitulo-moderno">Jorge Pérez: Honor en Lanús</h2>
-        <div class="layout">
-            <div class="foto izq" style="background-image: url('img/jorge-perez.jpg');"></div>
-            <div class="texto">
-                <p>En el corazón de Lanús, Jorge Pérez representa el compromiso inquebrantable de los veteranos de nuestra ciudad. Como miembro activo del <a href="https://instagram.com" target="_blank" style="color:var(--azul-mar); text-decoration:underline; font-weight:bold;">Centro de Veteranos de Guerra de Lanús</a>, Jorge ha dedicado años a la "malvinización" barrial, transmitiendo su testimonio en escuelas y centros culturales locales. Su labor es un puente vital para que los alumnos de la EEST N°3 comprendan que la soberanía no es un concepto lejano, sino una causa defendida por vecinos que caminan nuestras mismas calles. Jorge personifica la resiliencia de quienes, tras el conflicto, transformaron su experiencia en una misión de servicio y educación. Su presencia constante en el centro de Remedios de Escalada es un recordatorio de que la memoria se construye día a día con el compromiso de toda la comunidad. Su palabra en el aula no solo enseña historia, sino que forja la identidad de futuros técnicos comprometidos con su patria. Jorge nos enseña que el combate por Malvinas sigue hoy en el campo de las ideas y la cultura. Al relatar sus vivencias, transforma el dolor del pasado en una herramienta de formación para que los jóvenes valoren la democracia y la integridad nacional. Es un orgullo para Lanús contar con ciudadanos de su talla, cuya vida es un ejemplo de coherencia y patriotismo que trasciende las épocas.</p>
-                <button class="read-more-btn">▾ Leer más</button>
-                <div class="map-container">
-                    <iframe src="https://google.com" allowfullscreen="" loading="lazy"></iframe>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- TRIVIA Y RESTO DE SECCIONES (Se mantienen igual) -->
-    <section id="trivia">
-        <h2 class="subtitulo-moderno">Trivia de Soberanía</h2>
-        <div class="layout">
-            <div class="trivia-container">
-                <div class="pregunta-item"><p>1. ¿En qué año se produjo la usurpación británica por la fuerza?</p>
-                <button onclick="check(this, true)" class="btn-trivia">1833</button><button onclick="check(this, false)" class="btn-trivia">1982</button>
-                <div class="feedback">En 1833 Gran Bretaña expulsó a la población argentina legítima.</div></div>
-                <div class="pregunta-item"><p>2. ¿Dónde se encuentra el Centro de Veteranos de Lanús?</p>
-                <button onclick="check(this, true)" class="btn-trivia">Remedios de Escalada</button><button onclick="check(this, false)" class="btn-trivia">Lanús Oeste</button>
-                <div class="feedback">El centro está ubicado en Remedios de Escalada.</div></div>
-                <div class="pregunta-item"><p>3. ¿Qué avión nacional se destacó en el conflicto?</p>
-                <button onclick="check(this, true)" class="btn-trivia">IA-58 Pucará</button><button onclick="check(this, false)" class="btn-trivia">Sea Harrier</button>
-                <div class="feedback">El Pucará fue clave en misiones de apoyo aéreo cercano.</div></div>
-                <div class="pregunta-item"><p>4. ¿Qué recursos estratégicos rodean a las islas?</p>
-                <button onclick="check(this, true)" class="btn-trivia">Petróleo y Pesca</button><button onclick="check(this, false)" class="btn-trivia">Carbón</button>
-                <div class="feedback">La zona tiene una inmensa riqueza ictícola e hidrocarburos.</div></div>
-                <div class="pregunta-item"><p>5. ¿A qué escuela técnica pertenece este proyecto?</p>
-                <button onclick="check(this, true)" class="btn-trivia">EEST N°3</button><button onclick="check(this, false)" class="btn-trivia">EEST N°1</button>
-                <div class="feedback">La EEST N°3 de Lanús mantiene viva la memoria nacional.</div></div>
-            </div>
-        </div>
-    </section>
-
-    <footer>
-        <div style="font-size: 1.5rem; margin-bottom: 10px; font-weight: 900;">EEST N°3 DE LANÚS "ISLAS MALVINAS"</div>
-        <div style="color: var(--celeste); font-weight: 700; letter-spacing: 5px;">PROHIBIDO OLVIDAR</div>
-    </footer>
-</div>
-
-<script>
-    document.querySelectorAll('.read-more-btn').forEach(btn => {
-        btn.addEventListener('click', function() {
-            const parent = this.parentElement;
-            const p = parent.querySelector('p');
-            p.classList.toggle('expanded');
-            this.textContent = p.classList.contains('expanded') ? '▴ Leer menos' : '▾ Leer más';
-        });
-    });
-
-    function check(btn, isCorrect) {
-        const parent = btn.parentElement;
-        const feedback = parent.querySelector('.feedback');
-        parent.querySelectorAll('.btn-trivia').forEach(b => b.classList.remove('correcta', 'incorrecta'));
-        btn.classList.add(isCorrect ? 'correcta' : 'incorrecta');
-        feedback.style.color = isCorrect ? "var(--verde-exito)" : "var(--rojo-error)";
-        feedback.style.display = 'block';
-    }
-</script>
-
-</body>
-</html>
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAYgAAAEWCAYAAAB8L68WAAAAOXRFWHRTb2Z0d2FyZQBNYXRwbG90bGliIHZlcnNpb24zLjguMCwgaHR0cHM6Ly9tYXRwbG90bGliLm9yZy81cm09AAAACXBIWXMAAA9hAAAPYQGoP6dpAABv80lEQVR4nOydZ5hV1dn+f3ueMndm6L3XgQEGhiE0URBFmmiCJSYaxW6i0XyzRCOaWGOuGltMsccuRqyoiGIB6R1mKAPDMMP0PrfP7497GGaYMjAzIDOf67ouL3POfu57zvfsvfdaa633W0pIkiRJ0pSNoTsASZIkSVsPSUBIkpREkASEJElJBEkASJKURJAEgCRJSQRJAEiSlESQBIAkSUkESQBIApQ999yzTndIkiRNHZAEgDSJo729nXPPPZfq6uq8Xj9p0iR6e3sH7V733HMP8+fPr6urK0mSNEnRId0BSJL8/1m6dCknnHCC7jAkaUpG8iBIUyjXX389p556KiUlJTQ2NnLllVdyzz338N///pfa2lpOOukkmpoaAHjttdd45JFHAGhqaqKxsRGAf/zjH5x//vnY7XY6Ojpobm7mzDPPZP369QCccsopHHfccaxbt45+/XrfY+XKlZSUlOQGfDgcZunSpQC88sormEwmqqurqaurY//99+epp54C4J577mHVqlVAXf0mSdIkRY6SNHVx4403cthhh/HEE08wfvx4rrnmGu644w7mzp3Lc889x9KlS6mqqiIcDvP1118zY8YMWltbqampYenSpYPr+vrrr1m0aBEnnXQSjz32GNdddx0AZ5xxBl9//TWnnHIKF198Me3t7RQUFHD77bfnef+f/vQnnn/+eZ555hnuuOMOnnrqKZ566ilqamq49957mTJlCldffTUXXHABl112Gfvtt9/AxZ8kSVMPkgSAnv3fL78+9u0/1BvOfP6E88+vjXz7R69v6v9N++C1r5V6z8S/8pLp+X5fP78e+v/9P/G6uHziYvL98/2z+v1tH4z2NUnf/X7pOfD+/t9YOn469vVzf9unf0f/P9vXf1P699BvV//f+v9Tf2/p3/u/X/+u/vvX/z/190v9e+j3S/+/fS7+f/f79Nvvz9fPrv6f7X+uP7/6b7Z/N329fN778fX/Xv29fH/p/z9f+r819e/fV/f3S9d/0+XfG1f7S9X78vP59efm/5/ysrpfpr9Hqu/f7u67u/tPf/xl/f9X+vmd/rXTv6/Ly9fV1f8vP59ff27+/ykf99997r0//b/TfT0yX/876ffXv9v9qf9Zf7f+Z3q5v1N/X/z7Sveb6+uT+vfF9V9X999X7v+pf7/e7/Z9Yf/e+N9Y34+r763vx6+v68f/Xpffj9v3fTf7v/WfV9+Py3V8uf1p8n+u9qfruvR5dbkuSZ9X+/fG1fXW9+Ov79WP/Xtdrz6vS59X139z/P5+tV9N/9783L54Xaert+uP25eHKC3WQ//e0L83XO0vXf/e0L837N+P8a/uqMvXdbrO9/vVfv7p6upyn9P1P3/Z5z9dXu9+fU9XvU/u6f790/VvV/un6/7v5D/f+j+v/OfpP5f/vPr/Z7nPe9r9X6f7v8f99+r/7O7v1/+m+7+6f6fu/6T+j+X/+vT75H6p+v9O1/87P9fVf3/Vf6f7r+v3Rv2frv6/u/u/uv+7+89S97+7v7O7/6v7d8v/+1X/U/m/U7v/q/u/u39H9+uUf6W6/07X/ztd/+90/737v9T99+n/unP3v6X+b7r+36n/8/6vqfvjdP8X9390v+Z/S/+x9B/L7+7Mv7/6Z+Z/7p9l7N/7P/9O/XNzv0z966L790X9f6f790X369TfF3f71P5j0f849X9v9F+n/un+fdH96/r/5P+f7r839K+L7t8X9X+f/j/594X7/26X/7Hof578v9P/9/T9v/L7v/L73f3p9v997X+n9u9N9/+Zpuv/Tff7/6f7Z/vvdP+9un9P/H+f/qf658X9/5v/6yZ+z9V7M679Z6v89zN0v0X9u0X/+t7f+3v3/0f3f6v790/d7+79Pv0vdf/u7q7p7p++3q7/mZ7u79R1f/p6uv6Xrv/Z+p99p/+p/9nv9D9TPzdfv7Zffy6/tt9/Lv/G8vG6f1/+Xn9X/vOlf2/ofp36v6/u36v7df6/9n8v3f/f7v48v6u/97p/p+t+f7V/p/vX9f9Ofm65fC45/p8un0uOPy77M/GvG99fPvGfLv3fV6p7v66n76fLp/7fGz83XfXvzX8+XZer68/P/S99Tlfv/9P9v9T/O/Xvjfz36n6v/u9x/TfH7+9X+9X0783P7YvXdbr6uP64fXmI0mI99O8N/XvD1f7S9e8N/XvD/v0Y/+qOunxdp+v6H/XvDf37V+o8r/XvTf17Q/9+lLp8XV1uvL78Xp0X6vJ1db7f7u5V1++Nf3N+X05Xl/uYrvf5f1n9vL68f7u77+7uv65er6vO/7798Xr89v91uY8vfW99Wv1x89/Z5f041ff+D9f9fXzP3/Z5XV39vXG1v1S9Lz+fX39u/v8pL6v7Zfp6pPr+7e6+u7v/9Mdf1v9/pZ/f1V87fVxdvjau7tefT/3v7+q9dXW91Ov6f5v7787/X3f/rct99X+nuvvP/O/9n3W3P03Xf965259m9/Vp1v/7+l+67s/df/9u96fpuj9X+9Pv9PPrP6997+r7f3Xv93p9u7NfV/v1V09XF6/rdL7T9V9X9/fV/f/qfLz6+/qfu/7H8v6d7k/X9X9f38f/6f6drvu363+n9uv5P5Y/Xf927e7/0/U/lv7f4f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v6f6v
