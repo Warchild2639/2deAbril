@@ -61,10 +61,12 @@
         .map-container { clear: both; width: 100%; height: 350px; border-radius: 20px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.1); border: 5px solid white; margin-top: 20px; }
         .map-container iframe { width: 100%; height: 100%; border: 0; }
         .trivia-container { background: white; padding: 40px; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.05); border: 2px solid #eee; }
-        .btn-trivia { background: #f8f9fa; border: 2px solid #eee; padding: 15px 25px; border-radius: 12px; cursor: pointer; font-weight: 700; margin-right: 10px; margin-bottom: 10px; transition: 0.3s; }
-        .btn-trivia.correcta { background: var(--verde-exito) !important; color: white !important; }
-        .btn-trivia.incorrecta { background: var(--rojo-error) !important; color: white !important; }
-        .feedback { display: none; margin-top: 15px; font-size: 1rem; font-weight: 700; padding: 15px; border-left: 5px solid var(--amarillo); background: #fffde7; }
+        .pregunta-item { margin-bottom: 40px; }
+        .pregunta-item p { font-weight: 900; font-size: 1.3rem; color: var(--azul-mar); margin-bottom: 20px; }
+        .btn-trivia { background: #f8f9fa; border: 2px solid #eee; padding: 15px 25px; border-radius: 12px; cursor: pointer; font-weight: 700; margin-right: 10px; margin-bottom: 10px; transition: 0.3s; font-family: inherit; }
+        .btn-trivia.correcta { background: var(--verde-exito) !important; color: white !important; border-color: var(--verde-exito) !important; }
+        .btn-trivia.incorrecta { background: var(--rojo-error) !important; color: white !important; border-color: var(--rojo-error) !important; }
+        .feedback { display: none; margin-top: 15px; font-size: 1rem; font-weight: 700; padding: 15px; border-left: 5px solid var(--amarillo); background: #fffde7; line-height: 1.5; }
 
         footer { background: var(--azul-mar); color: white; padding: 80px 20px; text-align: center; clear: both; }
 
@@ -107,6 +109,7 @@
         <a href="#trivia">TRIVIA</a>
     </nav>
 
+    <!-- HISTORIA -->
     <section id="historia">
         <h2 class="subtitulo-moderno">Contexto Histórico</h2>
         <div class="layout">
@@ -118,6 +121,7 @@
         </div>
     </section>
 
+    <!-- BELGRANO -->
     <section id="belgrano">
         <h2 class="subtitulo-moderno">ARA General Belgrano</h2>
         <div class="layout">
@@ -129,17 +133,19 @@
         </div>
     </section>
 
+    <!-- COVENTRY -->
     <section id="coventry">
         <h2 class="subtitulo-moderno">HMS Coventry</h2>
         <div class="layout">
             <div class="foto izq" style="background-image: url('img/coventry.jpg');"></div>
             <div class="texto">
-                <p>El 25 de mayo de 1982, la Fuerza Aérea Argentina escribió una página audaz al hundir al destructor británico HMS Coventry. Escuadrillas de aviones A-4B Skyhawk volaron en misiones de ataque rasante, situándose apenas a metros de las olas para evitar la detección de los radares enemigos en una de las operaciones más peligrosas de la guerra. Esta maniobra exigía una pericia técnica y un coraje físico admirados mundialmente por expertos en aviación. Este éxito militar demostró la determinación inquebrantable de los combatientes argentinos por defender su territorio legítimo frente a una superioridad tecnológica abrumadora de la OTAN. La hazaña del 25 de mayo se estudia hoy en las academias militares como ejemplo de ingenio táctico y valentía suprema. Simboliza la capacidad del factor humano para superar limitaciones materiales mediante el profesionalismo y el adiestramiento riguroso. Para los estudiantes técnicos, resalta la importancia del mantenimiento operativo de los sistemas bajo presión extrema, donde cada tuerca y cada ajuste mecánico fueron vitales para el éxito de la misión. El coraje de aquellos pilotos, que enfrentaron fuego antiaéreo con sistemas convencionales y bombas que debían ser armadas manualmente, reafirmó el compromiso nacional y dejó un legado de orgullo que continúa inspirando a quienes valoran la técnica aplicada en la defensa de la soberanía argentina. El HMS Coventry es el símbolo de la voluntad sobre la tecnología.</p>
+                <p>El 25 de mayo de 1982, la Fuerza Aérea Argentina escribió una página audaz al hundir al destructor británico HMS Coventry. Escuadrillas de aviones A-4B Skyhawk volaron en misiones de ataque rasante, situándose apenas a metros de las olas para evitar la detección de los radares enemigos en una de las operaciones más peligrosas de la guerra. Esta maniobra exigía una pericia técnica y un coraje físico admirados mundialmente por expertos en aviación. Este éxito militar demostró la determinación inquebrantable de los combatientes argentinos por defender su territorio legítimo frente a una superioridad tecnológica abrumadora de la OTAN. La hazaña del 25 de mayo se estudia hoy en las academias militares como ejemplo de ingenio táctico y valentía suprema. Simboliza la capacidad del factor humano para superar limitaciones materiales mediante el profesionalismo y el adiestramiento riguroso. Para los estudiantes técnicos, resalta la importancia del mantenimiento operativo de los sistemas bajo presión extrema, donde cada tuerca y cada ajuste mecánico fueron vitales para el éxito de la misión. El coraje de aquellos pilotos, que enfrentaron fuego antiaéreo con sistemas convencionales y bombas que debían ser armadas manualmente, reafirmó el compromiso nacional y dejó un legado de orgullo que continúa inspirando a quienes valoran la técnica aplicada en la defensa de la soberanía argentina.</p>
                 <button class="read-more-btn">▾ Leer más</button>
             </div>
         </div>
     </section>
 
+    <!-- FUERZA AÉREA -->
     <section id="fuerza-aerea">
         <h2 class="subtitulo-moderno">Fuerza Aérea</h2>
         <div class="layout">
@@ -151,6 +157,7 @@
         </div>
     </section>
 
+    <!-- ECONOMÍA -->
     <section id="economia">
         <h2 class="subtitulo-moderno">Impacto Económico</h2>
         <div class="layout">
@@ -166,6 +173,7 @@
         </div>
     </section>
 
+    <!-- VETERANOS -->
     <section id="veteranos">
         <h2 class="subtitulo-moderno">Nuestros Veteranos</h2>
         <div class="layout">
@@ -177,6 +185,7 @@
         </div>
     </section>
 
+    <!-- JORGE PÉREZ -->
     <section id="jorge-perez">
         <h2 class="subtitulo-moderno">Jorge Pérez: Honor en Lanús</h2>
         <div class="layout">
@@ -185,12 +194,13 @@
                 <p>En el corazón de Lanús, Jorge Pérez representa el compromiso inquebrantable de los veteranos de nuestra ciudad. Como miembro activo del @vgmlanus <a href="https://instagram.com" target="_blank" class="insta-link">(Centro de Veteranos de Guerra de Lanús)</a>, Jorge ha dedicado años a la "malvinización" barrial, transmitiendo su testimonio en escuelas y centros culturales locales. Su labor es un puente vital para que los alumnos de la EEST N°3 comprendan que la soberanía no es un concepto lejano, sino una causa defendida por vecinos que caminan nuestras mismas calles. Jorge personifica la resiliencia de quienes, tras el conflicto, transformaron su experiencia en una misión de servicio y educación. Su presencia constante en el centro de Remedios de Escalada es un recordatorio de que la memoria se construye día a día con el compromiso de toda la comunidad. Su palabra en el aula no solo enseña historia, sino que forja la identidad de futuros técnicos comprometidos con su patria.</p>
                 <button class="read-more-btn">▾ Leer más</button>
                 <div class="map-container">
-                    <iframe src="https://maps.app.goo.gl/7APtYZPbmono8rvY6" allowfullscreen="" loading="lazy"></iframe>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d26233.3697831254!2d-58.410468481982846!3d-34.7260782268387!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bccd2064900d05%3A0xdd5bbe9100d7726c!2sCentro%20de%20Veteranos%20de%20Guerra%20de%20Malvina%20de%20Lanus!5e0!3m2!1ses!2sar!4v1777313675484!5m2!1ses!2sar" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                 </div>
             </div>
         </div>
     </section>
 
+    <!-- SOBERANÍA -->
     <section id="soberania">
         <h2 class="subtitulo-moderno">Soberanía Hoy</h2>
         <div class="layout">
@@ -202,10 +212,12 @@
         </div>
     </section>
 
+    <!-- TRIVIA (5 PREGUNTAS) -->
     <section id="trivia">
         <h2 class="subtitulo-moderno">Trivia de Soberanía</h2>
         <div class="layout">
             <div class="trivia-container">
+                <!-- Pregunta 1 -->
                 <div class="pregunta-item">
                     <p>1. ¿En qué año se produjo la usurpación británica por la fuerza?</p>
                     <button onclick="check(this, false)" class="btn-trivia">1982</button>
@@ -213,12 +225,37 @@
                     <button onclick="check(this, false)" class="btn-trivia">1900</button>
                     <div class="feedback">En 1833 Gran Bretaña expulsó a la población y autoridades argentinas legítimas.</div>
                 </div>
+                <!-- Pregunta 2 -->
                 <div class="pregunta-item">
                     <p>2. ¿Dónde se encuentra el Centro de Veteranos de Lanús?</p>
                     <button onclick="check(this, true)" class="btn-trivia">Remedios de Escalada</button>
                     <button onclick="check(this, false)" class="btn-trivia">Lanús Oeste</button>
                     <button onclick="check(this, false)" class="btn-trivia">Valentín Alsina</button>
                     <div class="feedback">El centro está ubicado en Gral. Ferré 3101, Remedios de Escalada.</div>
+                </div>
+                <!-- Pregunta 3 -->
+                <div class="pregunta-item">
+                    <p>3. ¿Qué avión de fabricación nacional se destacó en el conflicto?</p>
+                    <button onclick="check(this, false)" class="btn-trivia">Mirage</button>
+                    <button onclick="check(this, true)" class="btn-trivia">IA-58 Pucará</button>
+                    <button onclick="check(this, false)" class="btn-trivia">Sea Harrier</button>
+                    <div class="feedback">El Pucará, fabricado en Argentina, cumplió misiones fundamentales de apoyo aéreo.</div>
+                </div>
+                <!-- Pregunta 4 -->
+                <div class="pregunta-item">
+                    <p>4. ¿Qué recurso estratégico rodea a las Islas Malvinas?</p>
+                    <button onclick="check(this, false)" class="btn-trivia">Oro</button>
+                    <button onclick="check(this, false)" class="btn-trivia">Uranio</button>
+                    <button onclick="check(this, true)" class="btn-trivia">Petróleo y Pesca</button>
+                    <div class="feedback">La zona es rica en recursos ictícolas y potenciales yacimientos de hidrocarburos.</div>
+                </div>
+                <!-- Pregunta 5 -->
+                <div class="pregunta-item">
+                    <p>5. ¿Cómo se llama el veterano de Lanús destacado en este sitio?</p>
+                    <button onclick="check(this, true)" class="btn-trivia">Jorge Pérez</button>
+                    <button onclick="check(this, false)" class="btn-trivia">Juan García</button>
+                    <button onclick="check(this, false)" class="btn-trivia">Carlos López</button>
+                    <div class="feedback">Jorge Pérez es un miembro activo del centro local y guardián de la memoria en Lanús.</div>
                 </div>
             </div>
         </div>
@@ -231,6 +268,7 @@
 </div>
 
 <script>
+    // Sistema Leer Más (corregido para celulares)
     document.querySelectorAll('.read-more-btn').forEach(btn => {
         btn.addEventListener('click', function() {
             const contenedor = this.closest('.layout');
@@ -240,10 +278,12 @@
         });
     });
 
+    // Sistema de Trivia
     function check(btn, isCorrect) {
         const parent = btn.parentElement;
         const feedback = parent.querySelector('.feedback');
         parent.querySelectorAll('.btn-trivia').forEach(b => b.classList.remove('correcta', 'incorrecta'));
+        
         btn.classList.add(isCorrect ? 'correcta' : 'incorrecta');
         feedback.style.color = isCorrect ? "var(--verde-exito)" : "var(--rojo-error)";
         feedback.style.display = 'block';
