@@ -13,6 +13,7 @@
             --rojo-yt: #FF0000;
             --verde-exito: #28a745;
             --rojo-error: #dc3545;
+            --azul-oscuro: #011627;
         }
 
         * { box-sizing: border-box; }
@@ -37,14 +38,13 @@
         .dropdown-content a { color: var(--azul-mar); padding: 12px 16px; text-decoration: none; display: block; text-align: left; font-size: 0.8rem; }
         .nav-item:hover .dropdown-content { opacity: 1; visibility: visible; transform: translateY(0); }
 
-        /* SECCIONES GENERALES */
+        /* SECCIONES */
         section { padding: 100px 10%; max-width: 1400px; margin: 0 auto; }
         section:nth-child(even) { background: #fff; }
         section:nth-child(odd) { background: #f9f9f9; }
         .subtitulo-moderno { display: block; width: 100%; background: var(--azul-mar); color: white; padding: 20px 50px; font-weight: 900; font-size: 1.8rem; margin-bottom: 60px; text-transform: uppercase; border-left: 15px solid var(--amarillo); clip-path: polygon(0 0, 98% 0, 100% 50%, 98% 100%, 0 100%); }
         .layout { display: block; width: 100%; clear: both; }
 
-        /* IMÁGENES Y TEXTOS */
         .foto { width: 450px; height: 350px; border-radius: 20px; background-size: cover; background-position: center; box-shadow: 0 20px 40px rgba(0,0,0,0.2); background-color: var(--celeste); border: 8px solid white; margin-bottom: 30px; }
         .foto.izq { float: left; margin-right: 40px; }
         .foto.der { float: right; margin-left: 40px; }
@@ -52,25 +52,27 @@
         .read-more-btn { display: none; }
         .insta-link { color: var(--azul-mar); text-decoration: underline; font-weight: 700; }
 
-        /* PANEL ECONÓMICO */
-        .panel-economico { background: #000b14; color: white; padding: 40px; border-radius: 20px; margin-bottom: 30px; clear: both; }
-        .barra-progreso { background: rgba(255,255,255,0.05); height: 35px; border-radius: 50px; overflow: hidden; margin-top: 10px; }
-        .relleno-progreso { height: 100%; background: var(--celeste); display: flex; align-items: center; padding-left: 20px; font-weight: 900; color: var(--azul-mar); }
+        /* PANEL ECONÓMICO MEJORADO */
+        .panel-economico { background: var(--azul-oscuro); color: #e0e0e0; padding: 40px; border-radius: 24px; margin-bottom: 30px; clear: both; border: 1px solid rgba(116, 172, 223, 0.2); box-shadow: 0 15px 35px rgba(0,0,0,0.4); }
+        .label-perdida { display: flex; justify-content: space-between; font-weight: 700; margin-bottom: 12px; color: var(--celeste); }
+        .barra-progreso { background: rgba(255,255,255,0.1); height: 40px; border-radius: 10px; overflow: hidden; border: 1px solid rgba(255,255,255,0.05); }
+        .relleno-progreso { height: 100%; background: linear-gradient(90deg, var(--azul-mar), var(--celeste)); display: flex; align-items: center; padding-left: 20px; font-weight: 900; color: white; }
+        .info-footer-economico { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; margin-top: 25px; }
+        .tarjeta-dato { background: rgba(116, 172, 223, 0.1); padding: 20px; border-radius: 15px; text-align: center; border: 1px solid rgba(116, 172, 223, 0.1); }
+        .tarjeta-dato span { display: block; font-size: 1.6rem; font-weight: 900; color: var(--amarillo); margin-top: 5px; }
 
         /* MAPA Y TRIVIA */
         .map-container { clear: both; width: 100%; height: 350px; border-radius: 20px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.1); border: 5px solid white; margin-top: 20px; }
         .map-container iframe { width: 100%; height: 100%; border: 0; }
         .trivia-container { background: white; padding: 40px; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.05); border: 2px solid #eee; }
         .pregunta-item { margin-bottom: 40px; }
-        .pregunta-item p { font-weight: 900; font-size: 1.3rem; color: var(--azul-mar); margin-bottom: 20px; }
         .btn-trivia { background: #f8f9fa; border: 2px solid #eee; padding: 15px 25px; border-radius: 12px; cursor: pointer; font-weight: 700; margin-right: 10px; margin-bottom: 10px; transition: 0.3s; font-family: inherit; }
-        .btn-trivia.correcta { background: var(--verde-exito) !important; color: white !important; border-color: var(--verde-exito) !important; }
-        .btn-trivia.incorrecta { background: var(--rojo-error) !important; color: white !important; border-color: var(--rojo-error) !important; }
-        .feedback { display: none; margin-top: 15px; font-size: 1rem; font-weight: 700; padding: 15px; border-left: 5px solid var(--amarillo); background: #fffde7; line-height: 1.5; }
+        .btn-trivia.correcta { background: var(--verde-exito) !important; color: white !important; }
+        .btn-trivia.incorrecta { background: var(--rojo-error) !important; color: white !important; }
+        .feedback { display: none; margin-top: 15px; font-size: 1rem; font-weight: 700; padding: 15px; border-left: 5px solid var(--amarillo); background: #fffde7; }
 
         footer { background: var(--azul-mar); color: white; padding: 80px 20px; text-align: center; clear: both; }
 
-        /* RESPONSIVE MÓVIL */
         @media (max-width: 900px) {
             header { height: 60vh; }
             .foto { width: 100%; float: none; margin: 0 0 20px 0; height: 250px; }
@@ -115,13 +117,13 @@
         <div class="layout">
             <div class="foto izq" style="background-image: url('img/historia.jpg');"></div>
             <div class="texto">
-                <p>La disputa por las Islas Malvinas constituye una de las problemáticas más profundas y persistentes de la identidad nacional argentina. Este conflicto hunde sus raíces en la usurpación violenta perpetrada por el Reino Unido en 1833, un acto que rompió de manera arbitraria con la integridad territorial de una nación joven que había heredado legítimamente estos territorios de la corona española. Desde aquel momento, Argentina nunca consintió la ocupación británica, manteniendo un reclamo diplomático incesante a lo largo de casi un siglo y medio en todos los foros internacionales. La importancia de este territorio no radica solo en la nostalgia histórica, sino en una sólida base jurídica respaldada por resoluciones de las Naciones Unidas que reconocen el enclave como una situación colonial que debe ser resuelta mediante el diálogo entre ambas partes. El 2 de abril de 1982, tras décadas de negociaciones estancadas, se inició la recuperación militar del archipiélago, un hecho que movilizó los sentimientos patrióticos más profundos de toda la sociedad argentina. Si bien el conflicto bélico estuvo marcado por un contexto político interno complejo, la causa Malvinas trascendió cualquier gobierno para convertirse en un símbolo de unidad nacional. Comprender este contexto histórico permite a las nuevas generaciones, y especialmente a los alumnos de la educación técnica, dimensionar la importancia de defender el patrimonio nacional. La gesta representa el sacrificio de miles de ciudadanos que reafirmaron que la soberanía nacional es un derecho irrenunciable y que la memoria es una herramienta de construcción futura.</p>
+                <p>La disputa por las Islas Malvinas constituye una de las problemáticas más profundas y persistentes de la identidad nacional argentina. Este conflicto hunde sus raíces en la usurpación violenta perpetrada por el Reino Unido en 1833, un acto que rompió de manera arbitraria con la integridad territorial de una nación joven que había heredado legítimamente estos territorios de la corona española. Desde aquel momento, Argentina nunca consintió la ocupación británica, manteniendo un reclamo diplomático incesante a lo largo de casi un siglo y medio en todos los foros internacionales. La importancia de este territorio no radica solo en la nostalgia histórica, sino en una sólida base jurídica respaldada por resoluciones de las Naciones Unidas que reconocen el enclave como una situación colonial que debe ser resuelta mediante el diálogo entre ambas partes. El 2 de abril de 1982, tras décadas de negociaciones estancadas, se inició la recuperación militar del archipiélago, un hecho que movilizó los sentimientos patrióticos más profundos de toda la sociedad argentina. Si bien el conflicto bélico estuvo marcado por un contexto político interno complejo, la causa Malvinas trascendió cualquier gobierno para convertirse en un símbolo de unidad nacional. Comprender este contexto histórico permite a las nuevas generaciones, y especialmente a los alumnos de la educación técnica, dimensionar la importancia de defender el patrimonio nacional. La gesta representa el sacrificio de miles de ciudadanos que reafirmaron que la soberanía nacional es un derecho irrenunciable y que la memoria es una herramienta de construcción futura para el desarrollo de nuestro país.</p>
                 <button class="read-more-btn">▾ Leer más</button>
             </div>
         </div>
     </section>
 
-    <!-- BELGRANO -->
+    <!-- ARA BELGRANO -->
     <section id="belgrano">
         <h2 class="subtitulo-moderno">ARA General Belgrano</h2>
         <div class="layout">
@@ -133,7 +135,7 @@
         </div>
     </section>
 
-    <!-- COVENTRY -->
+    <!-- HMS COVENTRY -->
     <section id="coventry">
         <h2 class="subtitulo-moderno">HMS Coventry</h2>
         <div class="layout">
@@ -151,19 +153,29 @@
         <div class="layout">
             <div class="foto der" style="background-image: url('img/fuerza-aerea.jpg');"></div>
             <div class="texto">
-                <p>La actuación de la Fuerza Aérea Argentina asombró al mundo por la valentía de sus pilotos y la eficacia de sus equipos de tierra. El empleo de aviones como el Skyhawk y el Pucará demostró la importancia crítica de contar con una industria de defensa propia y soberana. Detrás de cada despegue exitoso, hubo un equipo invisible de mecánicos, armeros y especialistas técnicos que trabajaron sin descanso, muchas veces en condiciones precarias en las bases del sur, para que cada sistema funcionara a la perfección. Para los alumnos de la EEST N°3, este es el ejemplo máximo de profesionalismo técnico: la capacidad de mantener operativos sistemas complejos bajo la presión de un conflicto bélico real. La soberanía técnica fue el pilar fundamental que permitió a los "Halcones" escribir páginas de gloria en la historia militar contemporánea. El profesionalismo de los equipos de tierra garantizó que la presencia argentina en el aire fuera una amenaza constante para la flota británica durante todo el conflicto. Entender estas lecciones sobre logística, ingeniería y mantenimiento es fundamental para comprender que la capacidad de operar y reparar equipos propios es lo que otorga independencia real a una nación frente a desafíos históricos, asegurando que el conocimiento técnico sea siempre un escudo protector de la patria.</p>
+                <p>La actuación de la Fuerza Aérea Argentina asombró al mundo por la valentía de sus pilotos y la eficacia de sus equipos de tierra. El empleo de aviones como el Skyhawk y el Pucará demostró la importancia crítica de contar con una industria de defensa propia y soberana. Detrás de cada despegue exitoso, hubo un equipo invisible de mecánicos, armeros y especialistas técnicos que trabajaron sin descanso, muchas veces en condiciones precarias en las bases del sur, para que cada sistema funcionara a la perfección. Para los alumnos de la EEST N°3, este es el ejemplo máximo de profesionalismo técnico: la capacidad de mantener operativos sistemas complejos bajo la presión de un conflicto bélico real. La soberanía técnica fue el pilar fundamental que permitió a los "Halcones" escribir páginas de gloria en la historia militar contemporánea. El profesionalismo de los equipos de tierra garantizó que la presencia argentina en el aire fuera una amenaza constante para la flota británica durante todo el conflicto. Entender estas lecciones sobre logística, ingeniería y mantenimiento es fundamental para comprender que la capacidad de operar y reparar equipos propios es lo que otorga independencia real a una nación frente a desafíos históricos, asegurando que el conocimiento técnico sea siempre un escudo protector de la patria nacional.</p>
                 <button class="read-more-btn">▾ Leer más</button>
             </div>
         </div>
     </section>
 
-    <!-- ECONOMÍA -->
+    <!-- ECONOMÍA MEJORADA -->
     <section id="economia">
         <h2 class="subtitulo-moderno">Impacto Económico</h2>
         <div class="layout">
             <div class="panel-economico">
-                <h3>Indicadores 1982</h3>
-                <div class="barra-progreso"><div class="relleno-progreso" style="width: 85%;">LOGÍSTICA: U$S 3.000M</div></div>
+                <div class="label-perdida">
+                    <span>⚓ COSTO LOGÍSTICO (1982)</span>
+                    <span>U$S 3.000M</span>
+                </div>
+                <div class="barra-progreso">
+                    <div class="relleno-progreso" style="width: 85%;">85% PRESUPUESTO</div>
+                </div>
+                <div class="info-footer-economico">
+                    <div class="tarjeta-dato"><small>📉 Caída PBI</small><span>-5.0%</span></div>
+                    <div class="tarjeta-dato"><small>💸 Inflación</small><span>209%</span></div>
+                    <div class="tarjeta-dato"><small>🏗️ Pérdida Ind.</small><span>U$S 1.500M</span></div>
+                </div>
             </div>
             <button class="read-more-btn">▾ Leer más</button>
             <div class="texto">
@@ -194,7 +206,7 @@
                 <p>En el corazón de Lanús, Jorge Pérez representa el compromiso inquebrantable de los veteranos de nuestra ciudad. Como miembro activo del @vgmlanus <a href="https://instagram.com" target="_blank" class="insta-link">(Centro de Veteranos de Guerra de Lanús)</a>, Jorge ha dedicado años a la "malvinización" barrial, transmitiendo su testimonio en escuelas y centros culturales locales. Su labor es un puente vital para que los alumnos de la EEST N°3 comprendan que la soberanía no es un concepto lejano, sino una causa defendida por vecinos que caminan nuestras mismas calles. Jorge personifica la resiliencia de quienes, tras el conflicto, transformaron su experiencia en una misión de servicio y educación. Su presencia constante en el centro de Remedios de Escalada es un recordatorio de que la memoria se construye día a día con el compromiso de toda la comunidad. Su palabra en el aula no solo enseña historia, sino que forja la identidad de futuros técnicos comprometidos con su patria.</p>
                 <button class="read-more-btn">▾ Leer más</button>
                 <div class="map-container">
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d26233.3697831254!2d-58.410468481982846!3d-34.7260782268387!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bccd2064900d05%3A0xdd5bbe9100d7726c!2sCentro%20de%20Veteranos%20de%20Guerra%20de%20Malvina%20de%20Lanus!5e0!3m2!1ses!2sar!4v1777313675484!5m2!1ses!2sar" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    <iframe src="https://google.com" allowfullscreen="" loading="lazy"></iframe>
                 </div>
             </div>
         </div>
@@ -212,12 +224,11 @@
         </div>
     </section>
 
-    <!-- TRIVIA (5 PREGUNTAS) -->
+    <!-- TRIVIA -->
     <section id="trivia">
         <h2 class="subtitulo-moderno">Trivia de Soberanía</h2>
         <div class="layout">
             <div class="trivia-container">
-                <!-- Pregunta 1 -->
                 <div class="pregunta-item">
                     <p>1. ¿En qué año se produjo la usurpación británica por la fuerza?</p>
                     <button onclick="check(this, false)" class="btn-trivia">1982</button>
@@ -225,7 +236,6 @@
                     <button onclick="check(this, false)" class="btn-trivia">1900</button>
                     <div class="feedback">En 1833 Gran Bretaña expulsó a la población y autoridades argentinas legítimas.</div>
                 </div>
-                <!-- Pregunta 2 -->
                 <div class="pregunta-item">
                     <p>2. ¿Dónde se encuentra el Centro de Veteranos de Lanús?</p>
                     <button onclick="check(this, true)" class="btn-trivia">Remedios de Escalada</button>
@@ -233,29 +243,26 @@
                     <button onclick="check(this, false)" class="btn-trivia">Valentín Alsina</button>
                     <div class="feedback">El centro está ubicado en Gral. Ferré 3101, Remedios de Escalada.</div>
                 </div>
-                <!-- Pregunta 3 -->
                 <div class="pregunta-item">
-                    <p>3. ¿Qué avión de fabricación nacional se destacó en el conflicto?</p>
+                    <p>3. ¿Qué avión nacional se destacó en el conflicto?</p>
                     <button onclick="check(this, false)" class="btn-trivia">Mirage</button>
                     <button onclick="check(this, true)" class="btn-trivia">IA-58 Pucará</button>
                     <button onclick="check(this, false)" class="btn-trivia">Sea Harrier</button>
-                    <div class="feedback">El Pucará, fabricado en Argentina, cumplió misiones fundamentales de apoyo aéreo.</div>
+                    <div class="feedback">El Pucará cumplió misiones fundamentales de apoyo aéreo cercano.</div>
                 </div>
-                <!-- Pregunta 4 -->
                 <div class="pregunta-item">
-                    <p>4. ¿Qué recurso estratégico rodea a las Islas Malvinas?</p>
-                    <button onclick="check(this, false)" class="btn-trivia">Oro</button>
-                    <button onclick="check(this, false)" class="btn-trivia">Uranio</button>
+                    <p>4. ¿Qué recurso estratégico rodea a las islas?</p>
                     <button onclick="check(this, true)" class="btn-trivia">Petróleo y Pesca</button>
-                    <div class="feedback">La zona es rica en recursos ictícolas y potenciales yacimientos de hidrocarburos.</div>
+                    <button onclick="check(this, false)" class="btn-trivia">Oro y Plata</button>
+                    <button onclick="check(this, false)" class="btn-trivia">Carbón</button>
+                    <div class="feedback">La zona posee una riqueza ictícola inmensa y potenciales hidrocarburos.</div>
                 </div>
-                <!-- Pregunta 5 -->
                 <div class="pregunta-item">
-                    <p>5. ¿Cómo se llama el veterano de Lanús destacado en este sitio?</p>
-                    <button onclick="check(this, true)" class="btn-trivia">Jorge Pérez</button>
-                    <button onclick="check(this, false)" class="btn-trivia">Juan García</button>
-                    <button onclick="check(this, false)" class="btn-trivia">Carlos López</button>
-                    <div class="feedback">Jorge Pérez es un miembro activo del centro local y guardián de la memoria en Lanús.</div>
+                    <p>5. ¿A qué escuela técnica pertenece este proyecto de memoria?</p>
+                    <button onclick="check(this, false)" class="btn-trivia">EEST N°1</button>
+                    <button onclick="check(this, true)" class="btn-trivia">EEST N°3</button>
+                    <button onclick="check(this, false)" class="btn-trivia">EEST N°5</button>
+                    <div class="feedback">La EEST N°3 de Lanús mantiene viva la memoria bajo el lema "Prohibido Olvidar".</div>
                 </div>
             </div>
         </div>
@@ -268,7 +275,7 @@
 </div>
 
 <script>
-    // Sistema Leer Más (corregido para celulares)
+    // Leer más funcional para PC y Móvil
     document.querySelectorAll('.read-more-btn').forEach(btn => {
         btn.addEventListener('click', function() {
             const contenedor = this.closest('.layout');
@@ -278,12 +285,11 @@
         });
     });
 
-    // Sistema de Trivia
+    // Trivia con feedback inmediato
     function check(btn, isCorrect) {
         const parent = btn.parentElement;
         const feedback = parent.querySelector('.feedback');
         parent.querySelectorAll('.btn-trivia').forEach(b => b.classList.remove('correcta', 'incorrecta'));
-        
         btn.classList.add(isCorrect ? 'correcta' : 'incorrecta');
         feedback.style.color = isCorrect ? "var(--verde-exito)" : "var(--rojo-error)";
         feedback.style.display = 'block';
