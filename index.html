@@ -25,7 +25,6 @@
             overflow-x: hidden;
         }
 
-        /* HEADER Y NAVEGACIÓN */
         header { 
             height: 90vh; display: flex; align-items: center; justify-content: center; 
             color: white; text-align: center;
@@ -46,7 +45,6 @@
         .dropdown-content a:hover { background-color: #f1f1f1; }
         .nav-item:hover .dropdown-content, .nav-item:focus .dropdown-content { opacity: 1; visibility: visible; transform: translateY(0); }
 
-        /* SECCIONES */
         section { padding: 100px 10%; max-width: 1400px; margin: 0 auto; }
         section:nth-child(even) { background: #fff; }
         section:nth-child(odd) { background: #f9f9f9; }
@@ -59,7 +57,7 @@
         .foto.der { float: right; margin-left: 40px; }
 
         .texto p { line-height: 1.8; text-align: justify; font-size: 1.2rem; margin-bottom: 20px; }
-        .read-more-btn { display: none; } /* Oculto en PC */
+        .read-more-btn { display: none; }
 
         .video-wrapper { clear: both; display: flex; justify-content: flex-end; padding-top: 20px; }
         .btn-ver-video { background-color: var(--rojo-yt); color: white; text-decoration: none; padding: 12px 30px; font-weight: 900; border-radius: 50px; transition: 0.3s; }
@@ -73,15 +71,13 @@
         .tarjeta-dato { background: rgba(255,255,255,0.05); padding: 15px; border-radius: 10px; text-align: center; }
         .tarjeta-dato span { display: block; font-size: 1.4rem; font-weight: 900; color: var(--amarillo); }
 
-        /* TRIVIA */
         .trivia-container { background: white; padding: 40px; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.05); border: 2px solid #eee; }
         .pregunta-item { margin-bottom: 40px; }
         .pregunta-item p { font-weight: 900; font-size: 1.3rem; color: var(--azul-mar); margin-bottom: 20px; }
         .btn-trivia { background: #f8f9fa; border: 2px solid #eee; padding: 15px 25px; border-radius: 12px; cursor: pointer; font-weight: 700; font-family: inherit; transition: 0.3s; margin-right: 10px; margin-bottom: 10px; }
-        .btn-trivia:hover { border-color: var(--celeste); background: #f0f7ff; }
         .btn-trivia.correcta { background: var(--verde-exito) !important; color: white !important; border-color: var(--verde-exito) !important; }
         .btn-trivia.incorrecta { background: var(--rojo-error) !important; color: white !important; border-color: var(--rojo-error) !important; }
-        .feedback { display: none; margin-top: 15px; font-size: 1rem; font-weight: 700; color: var(--azul-mar); padding: 10px; border-left: 5px solid var(--amarillo); background: #fffde7; }
+        .feedback { display: none; margin-top: 15px; font-size: 1rem; font-weight: 700; color: var(--azul-mar); padding: 15px; border-left: 5px solid var(--amarillo); background: #fffde7; line-height: 1.5; }
 
         footer { background: var(--azul-mar); color: white; padding: 80px 20px; text-align: center; clear: both; }
 
@@ -124,22 +120,109 @@
         <a href="#trivia">TRIVIA</a>
     </nav>
 
-    <!-- [Secciones Historia, Belgrano, Coventry, Fuerza Aérea, Economía, Veteranos y Soberanía se mantienen igual] -->
-    <!-- Nota: He resumido las secciones previas para centrarme en la estructura unificada -->
-    
+    <!-- HISTORIA -->
     <section id="historia">
         <h2 class="subtitulo-moderno">Contexto Histórico</h2>
         <div class="layout">
             <div class="foto izq" style="background-image: url('img/historia.jpg');"></div>
             <div class="texto">
-                <p>La disputa por las Islas Malvinas constituye una de las problemáticas más profundas y persistentes de la identidad nacional argentina. Este conflicto hunde sus raíces en la usurpación violenta perpetrada por el Reino Unido en 1833, un acto que rompió de manera arbitraria con la integridad territorial de una nación joven que había heredado legítimamente estos territorios de la corona española. Desde aquel momento, Argentina nunca consintió la ocupación británica, manteniendo un reclamo diplomático incesante a lo largo de casi un siglo y medio en todos los foros internacionales. La importancia de este territorio no radica solo en la nostalgia histórica, sino en una sólida base jurídica respaldada por resoluciones de las Naciones Unidas que reconocen el enclave como una situación colonial que debe ser resuelta mediante el diálogo entre ambas partes.</p>
+                <p>La disputa por las Islas Malvinas constituye una de las problemáticas más profundas y persistentes de la identidad nacional argentina. Este conflicto hunde sus raíces en la usurpación violenta perpetrada por el Reino Unido en 1833, un acto que rompió de manera arbitraria con la integridad territorial de una nación joven que había heredado legítimamente estos territorios de la corona española. Argentina nunca consintió la ocupación británica, manteniendo un reclamo diplomático incesante. El 2 de abril de 1982 se inició la recuperación militar, un hecho que movilizó los sentimientos patrióticos más profundos. La causa Malvinas trasciende gobiernos para convertirse en un símbolo de unidad nacional y un derecho irrenunciable.</p>
                 <button class="read-more-btn">▾ Leer más</button>
                 <div class="video-wrapper"><a href="https://youtube.com" target="_blank" class="btn-ver-video">VER VIDEO</a></div>
             </div>
         </div>
     </section>
 
-    <!-- SECCIÓN TRIVIA -->
+    <!-- BELGRANO -->
+    <section id="belgrano">
+        <h2 class="subtitulo-moderno">ARA General Belgrano</h2>
+        <div class="layout">
+            <div class="foto der" style="background-image: url('img/belgrano.jpg');"></div>
+            <div class="texto">
+                <p>El hundimiento del Belgrano el 2 de mayo de 1982 es uno de los hitos más trágicos de la guerra. Atacado fuera de la zona de exclusión, el hecho eliminó posibilidades diplomáticas. 323 marinos perdieron la vida, convirtiéndose en centinelas eternos de nuestras aguas. Para la EEST N°3, el Belgrano es un símbolo de integridad inquebrantable y un legado que nos obliga a reflexionar sobre el profesionalismo técnico al servicio de la patria.</p>
+                <button class="read-more-btn">▾ Leer más</button>
+                <div class="video-wrapper"><a href="https://youtube.com" target="_blank" class="btn-ver-video">VER VIDEO</a></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- COVENTRY -->
+    <section id="coventry">
+        <h2 class="subtitulo-moderno">HMS Coventry</h2>
+        <div class="layout">
+            <div class="foto izq" style="background-image: url('img/coventry.jpg');"></div>
+            <div class="texto">
+                <p>El 25 de mayo de 1982, la Fuerza Aérea Argentina hundió al destructor HMS Coventry mediante misiones de ataque rasante. Esta proeza demostró la determinación y pericia de nuestros pilotos frente a una superioridad tecnológica abrumadora. Es un ejemplo de ingenio táctico que se estudia mundialmente y resalta el valor del mantenimiento operativo bajo presión extrema.</p>
+                <button class="read-more-btn">▾ Leer más</button>
+                <div class="video-wrapper"><a href="https://youtube.com" target="_blank" class="btn-ver-video">VER VIDEO</a></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FUERZA AEREA -->
+    <section id="fuerza-aerea">
+        <h2 class="subtitulo-moderno">Fuerza Aérea</h2>
+        <div class="layout">
+            <div class="foto der" style="background-image: url('img/fuerza-aerea.jpg');"></div>
+            <div class="texto">
+                <p>La actuación de la Fuerza Aérea asombró al mundo. Detrás de cada piloto hubo mecánicos y técnicos que trabajaron sin descanso. Para nuestra escuela técnica, este es el ejemplo máximo de profesionalismo: mantener sistemas complejos operativos en condiciones precarias. La soberanía técnica es el pilar de la independencia real de una nación.</p>
+                <button class="read-more-btn">▾ Leer más</button>
+                <div class="video-wrapper"><a href="https://youtube.com" target="_blank" class="btn-ver-video">VER VIDEO</a></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ECONOMIA -->
+    <section id="economia">
+        <h2 class="subtitulo-moderno">Impacto Económico</h2>
+        <div class="layout">
+            <div class="panel-economico">
+                <h3>Indicadores 1982</h3>
+                <div class="item-perdida">
+                    <div class="label-perdida"><span>COSTO DIRECTO</span><span>U$S 3.000M</span></div>
+                    <div class="barra-progreso"><div class="relleno-progreso" style="width: 85%;">LOGÍSTICA</div></div>
+                </div>
+                <div class="info-footer-economico">
+                    <div class="tarjeta-dato"><small>PÉRDIDAS MATERIALES</small><span>U$S 1.500M</span></div>
+                    <div class="tarjeta-dato"><small>DEUDA EXTERNA</small><span>U$S 45.000M</span></div>
+                </div>
+            </div>
+            <button class="read-more-btn">▾ Leer más</button>
+            <div class="texto">
+                <p>La guerra aceleró un colapso económico estructural. El gasto militar y el bloqueo asfixiaron la industria nacional. La verdadera soberanía se construye con pilares productivos sólidos e independencia financiera. Formar profesionales técnicos conscientes es el activo más valioso para asegurar el futuro del país.</p>
+                <button class="read-more-btn">▾ Leer más</button>
+                <div class="video-wrapper"><a href="https://youtube.com" target="_blank" class="btn-ver-video">VER VIDEO</a></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- VETERANOS -->
+    <section id="veteranos">
+        <h2 class="subtitulo-moderno">Nuestros Veteranos</h2>
+        <div class="layout">
+            <div class="foto der" style="background-image: url('img/veteranos.jpg');"></div>
+            <div class="texto">
+                <p>Los 649 héroes y quienes regresaron son testimonio sagrado de nuestra historia. Enfrentaron años de olvido, pero su persistencia mantuvo viva la causa. En la EEST N°3, "Prohibido Olvidar" es una práctica cotidiana. Su sacrificio es la base de nuestra conciencia nacional e identidad.</p>
+                <button class="read-more-btn">▾ Leer más</button>
+                <div class="video-wrapper"><a href="https://youtube.com" target="_blank" class="btn-ver-video">VER VIDEO</a></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SOBERANIA -->
+    <section id="soberania">
+        <h2 class="subtitulo-moderno">Soberanía Hoy</h2>
+        <div class="layout">
+            <div class="foto izq" style="background-image: url('img/soberania.jpg');"></div>
+            <div class="texto">
+                <p>Hoy la soberanía se defiende con estudio, ciencia y diplomacia. Malvinas es la llave para nuestra proyección antártica y el futuro del Atlántico Sur. Cada proyecto en nuestra escuela técnica es un paso hacia la Argentina independiente que soñamos bajo un ideal de memoria, verdad y justicia.</p>
+                <button class="read-more-btn">▾ Leer más</button>
+                <div class="video-wrapper"><a href="https://youtube.com" target="_blank" class="btn-ver-video">VER VIDEO</a></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- TRIVIA -->
     <section id="trivia">
         <h2 class="subtitulo-moderno">Trivia de Soberanía</h2>
         <div class="layout">
@@ -149,23 +232,23 @@
                     <button onclick="check(this, false)" class="btn-trivia">1982</button>
                     <button onclick="check(this, true)" class="btn-trivia">1833</button>
                     <button onclick="check(this, false)" class="btn-trivia">1900</button>
-                    <div class="feedback">¡Correcto! En 1833 Gran Bretaña expulsó a la población y autoridades argentinas legítimas.</div>
+                    <div class="feedback">En 1833 Gran Bretaña expulsó a la población y autoridades argentinas legítimas que ya estaban establecidas allí.</div>
                 </div>
 
                 <div class="pregunta-item">
                     <p>2. ¿Cuál es el argumento geográfico principal de Argentina?</p>
                     <button onclick="check(this, true)" class="btn-trivia">Plataforma Continental</button>
                     <button onclick="check(this, false)" class="btn-trivia">Idioma</button>
-                    <button onclick="check(this, false)" class="btn-trivia">Clima patagónico</button>
-                    <div class="feedback">¡Exacto! Las islas son una extensión natural de nuestra plataforma continental submarina.</div>
+                    <button onclick="check(this, false)" class="btn-trivia">Cercanía comercial</button>
+                    <div class="feedback">Las islas son una extensión natural y geológica de nuestra plataforma continental submarina patagónica.</div>
                 </div>
 
                 <div class="pregunta-item">
-                    <p>3. ¿Cómo reconoce la ONU la situación de Malvinas?</p>
+                    <p>3. ¿Cómo define la ONU el estatus de las islas?</p>
                     <button onclick="check(this, false)" class="btn-trivia">Territorio Británico</button>
                     <button onclick="check(this, true)" class="btn-trivia">Caso de Descolonización</button>
-                    <button onclick="check(this, false)" class="btn-trivia">Zona Neutral</button>
-                    <div class="feedback">¡Bien! La ONU considera que es una situación colonial que debe resolverse mediante el diálogo.</div>
+                    <button onclick="check(this, false)" class="btn-trivia">Zona en disputa comercial</button>
+                    <div class="feedback">La ONU lo reconoce como una situación colonial que requiere diálogo entre ambas naciones.</div>
                 </div>
             </div>
         </div>
@@ -178,7 +261,7 @@
 </div>
 
 <script>
-    // Script para "Leer más"
+    // Leer más
     document.querySelectorAll('.read-more-btn').forEach(btn => {
         btn.addEventListener('click', function() {
             const contenedor = this.closest('.layout');
@@ -193,21 +276,22 @@
         });
     });
 
-    // Script para Trivia
+    // Trivia
     function check(btn, isCorrect) {
         const parent = btn.parentElement;
         const buttons = parent.querySelectorAll('.btn-trivia');
         const feedback = parent.querySelector('.feedback');
 
         buttons.forEach(b => b.classList.remove('correcta', 'incorrecta'));
-
+        
         if (isCorrect) {
             btn.classList.add('correcta');
-            feedback.style.display = 'block';
+            feedback.style.color = "var(--verde-exito)";
         } else {
             btn.classList.add('incorrecta');
-            feedback.style.display = 'none';
+            feedback.style.color = "var(--rojo-error)";
         }
+        feedback.style.display = 'block'; // Se muestra siempre al responder
     }
 </script>
 
